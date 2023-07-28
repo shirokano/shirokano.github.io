@@ -1,24 +1,56 @@
-name: Build and Test client
-run-name: Test Suite 🚀
-on: [push]
+# name: Build and Test client
+# run-name: Test Suite 🚀
+# on: [push]
+# jobs:
+#   Run Tests:
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         node-version: [20.x]
+#     steps:
+#       - name: Check out repository code
+#         uses: actions/checkout@v3
+#       - name: Use Node.js ${{ matrix.node-version }}
+#         uses: actions/setup-node@v2
+#           with:
+#             node-version: ${{ matrix.node-version }}
+#       - run: echo " 🧪 Starting tests"
+#       - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+#       - name: npm ci, build and test
+#         run: |
+#           npm ci
+#           npm run build --if-present
+#           npm test
+#       - run: echo "🍏 This job's status is ${{ job.status }}."
+
+name: Build and Test React Application
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [master, develop]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  Run Tests:
+  build_test:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [20.x]
+
+    #  steps:
+    #       - name: Check out repository code
+    #         uses: actions/checkout@v3
+    #       - name: Use Node.js ${{ matrix.node-version }}
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v3
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-          with:
-            node-version: ${{ matrix.node-version }}
-      - run: echo " 🧪 Starting tests"
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
       - name: npm ci, build and test
         run: |
           npm ci
           npm run build --if-present
-          npm test 
-      - run: echo "🍏 This job's status is ${{ job.status }}."
+          npm test
