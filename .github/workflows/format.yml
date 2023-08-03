@@ -3,7 +3,7 @@ run-name: Format 💅🏻 ✔️
 on:
   pull_request:
     branches:
-      - develop
+      - master
 jobs:
   format:
     # Check if the PR is not from a fork
