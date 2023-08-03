@@ -1,6 +1,9 @@
 name: Automate Format
 run-name: Format 💅🏻 ✔️
-on: [pull_request]
+on:
+  pull_request:
+    branches:
+      - develop
 jobs:
   format:
     # Check if the PR is not from a fork
