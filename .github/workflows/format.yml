@@ -19,7 +19,7 @@ jobs:
         if: steps.git-check.outputs.modified == 'true'
         run: |
           git config --global user.name 'gohls'
-          git config --global user.email '66274765+gohls@users.noreply.github.com'
+          git config --global user.email 'sagohl@gmail'
           git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git commit -am "Automated changes"
           git push
