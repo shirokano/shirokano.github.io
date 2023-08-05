@@ -1,0 +1,22 @@
+- name: Run Tests
+  run: npm run test
+
+  # Example of adding annotations to the step
+  if: always() # To ensure annotations are added even if the step fails
+  env:
+    COVERAGE_PERCENTAGE: 80
+  continue-on-error: true # So that the workflow doesn't fail if tests fail
+  post-actions:
+    - name: Upload Test Results
+      if: ${{ always() }} # To ensure the action runs even if the previous step fails
+      uses: actions/upload-artifact@v2
+      with:
+        name: test-results
+        path: path/to/your/test/results
+
+    - name: Create Coverage Comment
+      if: ${{ always() }} # To ensure the action runs even if the previous step fails
+      run: |
+        echo "Coverage: $COVERAGE_PERCENTAGE%"
+      env:
+        COVERAGE_PERCENTAGE: ${{ env.COVERAGE_PERCENTAGE }}
