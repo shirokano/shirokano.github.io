@@ -7,10 +7,10 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-        run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-        run: echo "Installing dependencies..."
+      - name: Installing
         run: npm install
-        run: echo "Running test coverage..."
-      id: test
+      - name: testing coverage
+        id: test
         run: npm run test-coverage
+      - name: Results
         run: echo steps.test.outputs
