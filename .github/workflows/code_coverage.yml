@@ -2,7 +2,7 @@ name: Code Coverage
 run-name: Code Coverage 📊
 on: [push, pull_request]
 jobs:
-  build_and_test_coverage:
+  code_coverage:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -13,4 +13,4 @@ jobs:
         id: test
         run: npm run test-coverage
       - name: Results
-        run: echo steps.test.outputs
+        run: echo ${{steps.test.outputs}}
