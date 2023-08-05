@@ -1,22 +1,53 @@
-- name: Run Tests
-  run: npm run test
+name: CI
 
-  # Example of adding annotations to the step
-  if: always() # To ensure annotations are added even if the step fails
-  env:
-    COVERAGE_PERCENTAGE: 80
-  continue-on-error: true # So that the workflow doesn't fail if tests fail
-  post-actions:
-    - name: Upload Test Results
-      if: ${{ always() }} # To ensure the action runs even if the previous step fails
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-results
-        path: path/to/your/test/results
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
 
-    - name: Create Coverage Comment
-      if: ${{ always() }} # To ensure the action runs even if the previous step fails
-      run: |
-        echo "Coverage: $COVERAGE_PERCENTAGE%"
-      env:
-        COVERAGE_PERCENTAGE: ${{ env.COVERAGE_PERCENTAGE }}
+jobs:
+  test-and-report:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm run test
+
+      - name: Set Mock Coverage Percentage
+        id: coverage
+        run: |
+          # Setting a mock coverage percentage (80% in this example)
+          COVERAGE_PERCENTAGE=80
+          echo "Coverage: $COVERAGE_PERCENTAGE%"
+          echo "::set-output name=coverage::$COVERAGE_PERCENTAGE"
+
+      - name: Add Coverage Comment
+        uses: actions/github-script@v5
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const coverage = context.outputs.coverage;
+            const prNumber = context.payload.pull_request.number;
+            const repo = context.repo.repo;
+            const owner = context.repo.owner;
+
+            const message = `Coverage: ${coverage}%`;
+
+            github.issues.createComment({
+              owner: owner,
+              repo: repo,
+              issue_number: prNumber,
+              body: message
+            });
