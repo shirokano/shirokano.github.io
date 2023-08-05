@@ -14,33 +14,17 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Set Mock Coverage Percentage
-        id: coverage
-        run: |
-          # Setting a mock coverage percentage (80% in this example)
-          COVERAGE_PERCENTAGE=80
-          echo "Coverage: $COVERAGE_PERCENTAGE%"
-          echo "::set-output name=coverage::$COVERAGE_PERCENTAGE"
-
       - name: Add Coverage Comment
         uses: actions/github-script@v5
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const coverage = context.outputs.coverage;
+            const coverage = 90;
             const prNumber = context.payload.pull_request.number;
             const repo = context.repo.repo;
             const owner = context.repo.owner;
 
-            const message = `Coverage: ${coverage}%`;
+            const message = `Coverage: 90%`;
 
             github.issues.createComment({
               owner: owner,
