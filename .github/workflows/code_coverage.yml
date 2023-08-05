@@ -1,0 +1,16 @@
+name: Code Coverage
+run-name: Code Coverage 📊
+on: [push, pull_request]
+jobs:
+  build_and_test_coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+        run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
+        run: echo "Installing dependencies..."
+        run: npm install
+        run: echo "Running test coverage..."
+      id: test
+        run: npm run test-coverage
+        run: echo steps.test.outputs
