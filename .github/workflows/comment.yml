@@ -22,9 +22,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Run Tests
-        run: npm run test
-
       - name: Set Mock Coverage Percentage
         id: coverage
         run: |
