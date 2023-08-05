@@ -1,0 +1,16 @@
+name: Code Coverage
+run-name: Code Coverage 📊
+on: [push, pull_request]
+jobs:
+  code_coverage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Installing
+        run: npm install
+      - name: testing coverage
+        id: test
+        run: npm run test-coverage
+      - name: Results
+        run: echo ${{steps.test.outputs.stdout}}
