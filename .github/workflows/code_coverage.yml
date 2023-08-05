@@ -13,4 +13,4 @@ jobs:
         id: test
         run: npm run test-coverage
       - name: Results
-        run: echo ${{steps.test.outputs}}
+        run: echo ${{steps.test.outputs.*}}
