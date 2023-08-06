@@ -9,7 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create comment
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          message: |
-            Release ${{ github.sha }} to <https://pr-${{ github.event.number }}.example.com>
+        - uses: jwalton/gh-find-current-pr@v1
+          id: finder
+        - uses: marocchino/sticky-pull-request-comment@v2
+          with:
+            number: ${{ steps.finder.outputs.pr }}
+            message: |
+              Test ${{ github.sha }} ended successfully.
+              This message is from a push.
