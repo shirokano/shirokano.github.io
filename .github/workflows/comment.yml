@@ -1,9 +1,7 @@
 name: Create Check Run
 run-name: Format 🎨
 on:
-  pull_request:
-    branches:
-      - master
+  pull_request: [push, pull_request]
 
   uses: actions/github-script@v4
   with:
