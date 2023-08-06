@@ -1,34 +1,17 @@
-name: CI
-
-on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
-
-jobs:
-  test-and-report:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Add Coverage Comment
-        uses: actions/github-script@v5
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const coverage = 90;
-            const prNumber = context.payload.pull_request.number;
-            const repo = context.repo.repo;
-            const owner = context.repo.owner;
-
-            const message = `Coverage: 90%`;
-
-            github.issues.createComment({
-              owner: owner,
-              repo: repo,
-              issue_number: prNumber,
-              body: message
-            });
+- name: Create Check Run
+  uses: actions/github-script@v4
+  with:
+    github-token: ${{ secrets.GITHUB_TOKEN }}
+    script: |
+      const result = await github.checks.create({
+        owner: context.repo.owner,
+        repo: context.repo.repo,
+        name: 'Your Check Name',
+        head_sha: context.payload.pull_request.head.sha,
+        status: 'completed', // Set to 'in_progress' for ongoing checks
+        conclusion: 'success', // 'success', 'failure', 'neutral', etc.
+        output: {
+          title: 'Check Result',
+          summary: 'Your summary message here.',
+        },
+      });
