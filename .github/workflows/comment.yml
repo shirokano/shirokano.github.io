@@ -1,4 +1,10 @@
-- name: Create Check Run
+name: Create Check Run
+run-name: Format 🎨
+on:
+  pull_request:
+    branches:
+      - master
+
   uses: actions/github-script@v4
   with:
     github-token: ${{ secrets.GITHUB_TOKEN }}
