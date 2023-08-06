@@ -1,34 +1,15 @@
 name: Create Check Run on Push
 
-on: [push]
+on: [push_request]
 
 jobs:
-  create-check-run:
+  create-comment:
+    permissions:
+      pull-requests: write
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Create comment
+        uses: marocchino/sticky-pull-request-comment@v2
         with:
-          node-version: '14'
-
-      - name: Create Check Run
-        uses: actions/github-script@v4
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const result = await github.checks.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: 'Test Check',
-              head_sha: context.sha,
-              status: 'something status',
-              conclusion: 'something conclusion',
-              output: {
-                title: 'Check Result',
-                summary: 'something successfully.',
-              },
-            });
+          message: |
+            Release ${{ github.sha }} to <https://pr-${{ github.event.number }}.example.com>
