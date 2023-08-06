@@ -1,5 +1,5 @@
-name: Create Check Run
-run-name: Format 🎨
+name: something
+run-name: something 🎨
 on:
   pull_request: [push, pull_request]
 
