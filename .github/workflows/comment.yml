@@ -1,21 +1,43 @@
-name: something
-run-name: something 🎨
-on:
-  pull_request: [push, pull_request]
+name: Create Check Run on Push
 
-  uses: actions/github-script@v4
-  with:
-    github-token: ${{ secrets.GITHUB_TOKEN }}
-    script: |
-      const result = await github.checks.create({
-        owner: context.repo.owner,
-        repo: context.repo.repo,
-        name: 'Your Check Name',
-        head_sha: context.payload.pull_request.head.sha,
-        status: 'completed', // Set to 'in_progress' for ongoing checks
-        conclusion: 'success', // 'success', 'failure', 'neutral', etc.
-        output: {
-          title: 'Check Result',
-          summary: 'Your summary message here.',
-        },
-      });
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-check-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Create Check Run
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const result = await github.checks.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'Test Check',
+              head_sha: context.sha,
+              status: 'something status',
+              conclusion: 'something conclusion',
+              output: {
+                title: 'Check Result',
+                summary: 'something successfully.',
+              },
+            });
