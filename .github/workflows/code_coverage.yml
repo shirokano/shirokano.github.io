@@ -1,16 +1,28 @@
 name: Code Coverage
 run-name: Code Coverage 📊
-on: [push, pull_request]
+# Trigger for the workflow: when a pull request is opened or synchronized
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
 jobs:
   code_coverage:
+    # Check if the PR is not from a fork
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    permissions:
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - name: Installing
+      - name: Install dependencies
         run: npm install
-      - name: testing coverage
-        id: test
-        run: npm run test-coverage
-      - name: Results
-        run: echo ${{steps.test.outputs.stdout}}
+      - name: Test coverage
+        id: test-results
+        run: TEST_OUTPUT=$(npm run test:coverage)
+      - name: Comment test coverage
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          message: |
+            ${{ steps.test-results.outputs.test-output }}
