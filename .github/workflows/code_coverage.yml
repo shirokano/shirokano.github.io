@@ -22,7 +22,7 @@ jobs:
         id: test-results
         run: |
           TEST_OUTPUT=$(npm run test:coverage)
-          TEST_INFO=$(echo "$TEST_OUTPUT")
+          TEST_INFO=$(echo "$TEST_OUTPUT" | grep -E "All files")
           echo "::set-output name=test-info::$TEST_INFO"
       - name: Comment test coverage
         uses: marocchino/sticky-pull-request-comment@v2
