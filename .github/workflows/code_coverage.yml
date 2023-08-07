@@ -36,7 +36,7 @@ jobs:
         with:
           message: |
           Test Summary:
-          \% Stmts: ${{ steps.test-results.outputs.test-stmts }}
-          \% Branch: ${{ steps.test-results.outputs.test-branch }}
-          \% Funcs: ${{ steps.test-results.outputs.test-funcs }}
-          \% Lines: ${{ steps.test-results.outputs.test-lines }}
+          Stmts %: ${{ steps.test-results.outputs.test-stmts }}
+          Branch %: ${{ steps.test-results.outputs.test-branch }}
+          Funcs %: ${{ steps.test-results.outputs.test-funcs }}
+          Lines %: ${{ steps.test-results.outputs.test-lines }}
