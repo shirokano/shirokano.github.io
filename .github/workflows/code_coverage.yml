@@ -20,7 +20,9 @@ jobs:
         run: npm install
       - name: Test coverage
         id: test-results
-        run: TEST_OUTPUT=$(npm run test:coverage)
+        run: |
+          TEST_OUTPUT=$(npm run test:coverage)
+          echo "::set-output name=test-info::$TEST_OUTPUT"
       - name: Comment test coverage
         uses: marocchino/sticky-pull-request-comment@v2
         with:
