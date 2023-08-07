@@ -27,4 +27,4 @@ jobs:
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           message: |
-            ${{ steps.test-results.outputs.test-output }}
+            show this message ${{ steps.test-results.outputs.test-output }}
