@@ -1,10 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ProfileTopAppBar from './components/ProfileNavBar';
 
 function App() {
   return (
     <div className="App">
+      <ProfileTopAppBar />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -14,8 +16,7 @@ function App() {
           className="App-link"
           href="https://reactjs.org"
           target="_blank"
-          rel="noopener noreferrer"
-        >
+          rel="noopener noreferrer">
           learn react
         </a>
       </header>
