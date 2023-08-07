@@ -35,8 +35,8 @@ jobs:
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           message: |
-          Test Summary:
-          Stmts %: ${{ steps.test-results.outputs.test-stmts }}
-          Branch %: ${{ steps.test-results.outputs.test-branch }}
-          Funcs %: ${{ steps.test-results.outputs.test-funcs }}
-          Lines %: ${{ steps.test-results.outputs.test-lines }}
+            Test Summary:
+            Stmts %: ${{ steps.test-results.outputs.test-stmts }}
+            Branch %: ${{ steps.test-results.outputs.test-branch }}
+            Funcs %: ${{ steps.test-results.outputs.test-funcs }}
+            Lines %: ${{ steps.test-results.outputs.test-lines }}
