@@ -1,13 +1,11 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import ProfileTopAppBar from './ProfileNavBar';
+import ProfileTopAppBar, { pages } from './ProfileNavBar';
 
-test('renders profile app bar with correct button text', () => {
+test('renders profile app nav bar with all page buttons', () => {
   render(<ProfileTopAppBar />);
-  const navCVButton = screen.getByText(/CV/i);
-  const navBlogButton = screen.getByText(/Blog/i);
-  const navMeButton = screen.getByText(/Me/i);
-  expect(navCVButton).toBeInTheDocument();
-  expect(navBlogButton).toBeInTheDocument();
-  expect(navMeButton).toBeInTheDocument();
+  for (const page of pages) {
+    const pageButton = screen.getByTestId(page);
+    expect(pageButton).toBeInTheDocument();
+  }
 });

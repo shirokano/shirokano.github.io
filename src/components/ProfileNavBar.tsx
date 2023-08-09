@@ -11,7 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['CV', 'Blog', 'Me'];
+export const pages = ['CV', 'Blog', 'Me'];
 
 function ProfileTopAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -78,7 +78,9 @@ function ProfileTopAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <Typography textAlign="center" data-testid={page}>
+                    {page}
+                  </Typography>
                 </MenuItem>
               ))}
             </Menu>
