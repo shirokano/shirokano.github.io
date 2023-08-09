@@ -27,7 +27,7 @@ function ProfileTopAppBar() {
   return (
     <AppBar position="static" elevation={0} sx={{ borderBottom: 1, borderColor: '#eeeeee' }}>
       <Container maxWidth="xl">
-        <Toolbar disableGutters sx={{ minHeight: '50px !important', maxHeight: '50px !important' }}>
+        <Toolbar disableGutters variant="dense">
           <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
@@ -42,8 +42,7 @@ function ProfileTopAppBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}
-          >
+            }}>
             /SIMON_GOHL
           </Typography>
 
@@ -54,8 +53,7 @@ function ProfileTopAppBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
-            >
+              color="inherit">
               <MenuIcon />
             </IconButton>
             <Menu
@@ -74,8 +72,7 @@ function ProfileTopAppBar() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' }
-              }}
-            >
+              }}>
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center" data-testid={page}>
@@ -100,8 +97,7 @@ function ProfileTopAppBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}
-          >
+            }}>
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -109,8 +105,7 @@ function ProfileTopAppBar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'inherit', display: 'block' }}
-              >
+                sx={{ my: 2, color: 'inherit', display: 'block' }}>
                 {page}
               </Button>
             ))}
