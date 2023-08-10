@@ -14,12 +14,13 @@ import AdbIcon from '@mui/icons-material/Adb';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FolderSharedIcon from '@mui/icons-material/FolderShared';
-import logo from '../tech-brain.svg';
+import logo from '../s-logo.svg';
 
 export const pages = ['CV', 'Blog', 'Me', 'Lab'];
 
 function ProfileTopAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [over, setOver] = React.useState(false);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -37,7 +38,7 @@ function ProfileTopAppBar() {
             src={logo}
             className="my-logo"
             alt="logo"
-            style={{ maxHeight: '70%', paddingRight: 5 }}
+            style={{ maxHeight: '50%', paddingRight: 5, borderRadius: '5px', color: '#212121' }}
           />
           <Typography
             variant="h6"
@@ -54,7 +55,7 @@ function ProfileTopAppBar() {
               textDecoration: 'none'
             }}
           >
-            /SIMON_GOHL
+            {'mon_gohl'}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -89,7 +90,7 @@ function ProfileTopAppBar() {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center" data-testid={page}>
-                    {page}
+                    {over ? '/' + page : page}
                   </Typography>
                 </MenuItem>
               ))}
@@ -115,24 +116,23 @@ function ProfileTopAppBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'inherit', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+            {pages.map((page, i) => {
+              return (
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{ my: 2, color: 'inherit', display: 'block' }}
+                  onMouseOver={() => setOver(true)}
+                  onMouseOut={() => setOver(false)}
+                >
+                  {over ? '/' + pages[i] : page}
+                </Button>
+              );
+            })}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
             <Grid container direction="row" justifyContent="bottom" alignItems="center" spacing={1}>
-              <Grid item>
-                <a href="https://www.linkedin.com/in/sagohl/" target="_blank" rel="noreferrer">
-                  <FolderSharedIcon style={{ fontSize: 40, color: '#212121' }} />
-                </a>
-              </Grid>
               <Grid item>
                 <a href="https://github.com/gohls" target="_blank" rel="noreferrer">
                   <GitHubIcon style={{ fontSize: 30, color: '#212121' }} />
@@ -141,6 +141,15 @@ function ProfileTopAppBar() {
               <Grid item>
                 <a href="https://www.linkedin.com/in/sagohl/" target="_blank" rel="noreferrer">
                   <LinkedInIcon style={{ fontSize: 36, color: '#212121' }} />
+                </a>
+              </Grid>
+              <Grid item>
+                <a
+                  href="https://drive.google.com/file/d/1TiuEILXBB5mKFQGa3twcOei7Ckj4b5lA/view"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FolderSharedIcon style={{ fontSize: 40, color: '#212121' }} />
                 </a>
               </Grid>
             </Grid>
