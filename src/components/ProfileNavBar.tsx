@@ -13,8 +13,10 @@ import Grid from '@mui/material/Grid';
 import AdbIcon from '@mui/icons-material/Adb';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FolderSharedIcon from '@mui/icons-material/FolderShared';
+import logo from '../tech-brain.svg';
 
-export const pages = ['CV', 'Blog', 'Me'];
+export const pages = ['CV', 'Blog', 'Me', 'Lab'];
 
 function ProfileTopAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -31,7 +33,12 @@ function ProfileTopAppBar() {
     <AppBar position="static" elevation={0} sx={{ borderBottom: 1, borderColor: '#eeeeee' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters variant="dense">
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <img
+            src={logo}
+            className="my-logo"
+            alt="logo"
+            style={{ maxHeight: '70%', paddingRight: 5 }}
+          />
           <Typography
             variant="h6"
             noWrap
@@ -121,6 +128,11 @@ function ProfileTopAppBar() {
 
           <Box sx={{ flexGrow: 0 }}>
             <Grid container direction="row" justifyContent="bottom" alignItems="center" spacing={1}>
+              <Grid item>
+                <a href="https://www.linkedin.com/in/sagohl/" target="_blank" rel="noreferrer">
+                  <FolderSharedIcon style={{ fontSize: 40, color: '#212121' }} />
+                </a>
+              </Grid>
               <Grid item>
                 <a href="https://github.com/gohls" target="_blank" rel="noreferrer">
                   <GitHubIcon style={{ fontSize: 30, color: '#212121' }} />
