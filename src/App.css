@@ -37,7 +37,6 @@
   }
 }
 
-
 .App-main-wrap {
   background-color: #181717;
 
@@ -53,7 +52,7 @@
   background-color: #181717;
   padding-top: 130px;
   padding-bottom: 75px;
-  font-family: Aeonikfono,sans-serif;
+  font-family: Aeonikfono, sans-serif;
   font-weight: 700;
   position: relative;
 
@@ -93,31 +92,33 @@
 
 .App-hero-column {
   will-change: transform, opacity;
-    transform: translate3d(0px, 5px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    transform-style: preserve-3d;
-    opacity: 0.7255;
+  transform: translate3d(0px, 5px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    skew(0deg, 0deg);
+  transform-style: preserve-3d;
+  opacity: 0.7255;
 
-    grid-area: span 1/span 12/span 1/span 12;
-    justify-self: center;
+  grid-area: span 1 / span 12 / span 1 / span 12;
+  justify-self: center;
 
-    width: 100%;
-    max-width: 920px;
-    text-align: center;
-    align-items: center;
+  width: 100%;
+  max-width: 920px;
+  text-align: center;
+  align-items: center;
 }
 
 .H1-welcome {
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    skew(0deg, 0deg);
   opacity: 1;
   transform-style: preserve-3d;
 
   color: #e4e0dc;
   text-align: center;
   margin-bottom: 32px;
-  font-family: Aeonik,sans-serif;
+  font-family: Aeonik, sans-serif;
   font-size: 100px;
   font-weight: 700;
-  line-height: .82em;
+  line-height: 0.82em;
 }
 
 .Label-big {
@@ -133,6 +134,4 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 1.33em;
-
-
 }
