@@ -1,8 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import ProfileTopAppBar from './components/ProfileNavBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
 
 const theme = createTheme({
   palette: {
@@ -25,20 +26,26 @@ function App() {
     <div className="App">
       <ThemeProvider theme={theme}>
         <ProfileTopAppBar />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
+        <header className="App-header"></header>
+
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        {/* <a
             className="App-link"
             href="https://reactjs.org"
             target="_blank"
-            rel="noopener noreferrer"
-          >
+            rel="noopener noreferrer">
             learn react
-          </a>
-        </header>
+          </a> */}
+        <div className="App-main-wrap">
+          <div className="App-hero-section">
+            <Grid className="App-hero-container">
+              <div className="App-hero-column">
+                <div className="Label-big">Hello World!</div>
+                <div className="H1-welcome">Simon Gohl</div>
+              </div>
+            </Grid>
+          </div>
+        </div>
       </ThemeProvider>
     </div>
   );
