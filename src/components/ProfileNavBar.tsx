@@ -20,7 +20,7 @@ export const pages = ['CV', 'Blog', 'Me', 'Lab'];
 
 function ProfileTopAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [over, setOver] = React.useState(false);
+  const [overPage, setOverPage] = React.useState<null | string>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -90,7 +90,7 @@ function ProfileTopAppBar() {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center" data-testid={page}>
-                    {over ? '/' + page : page}
+                    {/* {over ? '/' + page : page} */}
                   </Typography>
                 </MenuItem>
               ))}
@@ -116,16 +116,16 @@ function ProfileTopAppBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page, i) => {
+            {pages.map((page) => {
               return (
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'inherit', display: 'block' }}
-                  onMouseOver={() => setOver(true)}
-                  onMouseOut={() => setOver(false)}
+                  onMouseOver={() => setOverPage(page)}
+                  onMouseOut={() => setOverPage(null)}
                 >
-                  {over ? '/' + pages[i] : page}
+                  {overPage === page ? '/' + page : page}
                 </Button>
               );
             })}
