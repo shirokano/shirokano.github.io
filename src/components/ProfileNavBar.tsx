@@ -20,7 +20,7 @@ export const pages = ['CV', 'Blog', 'Me', 'Lab'];
 
 function ProfileTopAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-  const [over, setOver] = React.useState(false);
+  const [overPage, setOverPage] = React.useState<null | string>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -53,8 +53,7 @@ function ProfileTopAppBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}
-          >
+            }}>
             {'mon_gohl'}
           </Typography>
 
@@ -65,8 +64,7 @@ function ProfileTopAppBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              color="inherit"
-            >
+              color="inherit">
               <MenuIcon />
             </IconButton>
             <Menu
@@ -85,12 +83,11 @@ function ProfileTopAppBar() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none' }
-              }}
-            >
+              }}>
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center" data-testid={page}>
-                    {over ? '/' + page : page}
+                    {/* {over ? '/' + page : page} */}
                   </Typography>
                 </MenuItem>
               ))}
@@ -111,8 +108,7 @@ function ProfileTopAppBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}
-          >
+            }}>
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -122,10 +118,9 @@ function ProfileTopAppBar() {
                   key={page}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'inherit', display: 'block' }}
-                  onMouseOver={() => setOver(true)}
-                  onMouseOut={() => setOver(false)}
-                >
-                  {over ? '/' + pages[i] : page}
+                  onMouseOver={() => setOverPage(page)}
+                  onMouseOut={() => setOverPage(null)}>
+                  {overPage === page ? '/' + page : page}
                 </Button>
               );
             })}
@@ -147,8 +142,7 @@ function ProfileTopAppBar() {
                 <a
                   href="https://drive.google.com/file/d/1TiuEILXBB5mKFQGa3twcOei7Ckj4b5lA/view"
                   target="_blank"
-                  rel="noreferrer"
-                >
+                  rel="noreferrer">
                   <FolderSharedIcon style={{ fontSize: 40, color: '#212121' }} />
                 </a>
               </Grid>
