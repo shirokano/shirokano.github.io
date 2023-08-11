@@ -116,7 +116,7 @@ function ProfileTopAppBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page, i) => {
+            {pages.map((page) => {
               return (
                 <Button
                   key={page}
