@@ -12,3 +12,5 @@ I've set up a GitHub workflow to work its magic by running tests and keeping our
 `npm run format` 🎨
 
 ## Tech Stack
+
+- `React`
