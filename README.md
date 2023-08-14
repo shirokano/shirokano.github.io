@@ -14,3 +14,4 @@ I've set up a GitHub workflow to work its magic by running tests and keeping our
 ## Tech Stack
 
 - `React`
+- `Typescript`
