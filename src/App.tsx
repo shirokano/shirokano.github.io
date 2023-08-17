@@ -1,6 +1,6 @@
 import React from 'react';
 // import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import ProfileTopAppBar from './components/ProfileNavBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
@@ -40,8 +40,8 @@ function App() {
           <div className="App-hero-section">
             <Grid className="App-hero-container">
               <div className="App-hero-column">
-                <div className="Label-big">Hello World!</div>
-                <div className="H1-welcome">Simon Gohl</div>
+                <div className="Hero-msg">HELLO WORLD!</div>
+                <div className="Hero-msg--my-name">{"I'M SIMON"}</div>
               </div>
             </Grid>
           </div>

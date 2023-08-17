@@ -37,6 +37,15 @@
   }
 }
 
+@keyframes App-my-name {
+  from {
+    transform: translate3d(0px, 15px, 0px);
+  }
+  to {
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
 .App-main-wrap {
   background-color: #181717;
 
@@ -121,7 +130,7 @@
   line-height: 0.82em;
 }
 
-.Label-big {
+.Hero-msg {
   /* transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); */
   animation: App-welcome-msg 2s;
   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
@@ -134,4 +143,21 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 1.33em;
+
+  &--my-name {
+    animation: App-my-name 1s;
+
+    // transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    // skew(0deg, 0deg);
+    // opacity: 1;
+    transform-style: preserve-3d;
+
+    color: red;
+    text-align: center;
+    margin-bottom: 32px;
+    font-family: Aeonik, sans-serif;
+    font-size: 100px;
+    font-weight: 700;
+    line-height: 0.82em;
+  }
 }
