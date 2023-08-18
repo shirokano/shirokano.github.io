@@ -19,15 +19,16 @@ import logo from '../s-logo.svg';
 export const pages = ['CV', 'Blog', 'Me', 'Lab'];
 
 function ProfileTopAppBar() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
   const [overPage, setOverPage] = React.useState<null | string>(null);
 
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
   };
 
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   return (
@@ -53,8 +54,7 @@ function ProfileTopAppBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}
-          >
+            }}>
             {'mon_gohl'}
           </Typography>
 
@@ -64,14 +64,13 @@ function ProfileTopAppBar() {
               aria-label="account of current user"
               aria-controls="menu-appbar"
               aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
+              onClick={handleClick}
+              color="inherit">
               <MenuIcon />
             </IconButton>
             <Menu
               id="menu-appbar"
-              anchorEl={anchorElNav}
+              anchorEl={anchorEl}
               anchorOrigin={{
                 vertical: 'bottom',
                 horizontal: 'left'
@@ -81,14 +80,13 @@ function ProfileTopAppBar() {
                 vertical: 'top',
                 horizontal: 'left'
               }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
+              open={Boolean(anchorEl)}
+              onClose={handleClose}
               sx={{
                 display: { xs: 'block', md: 'none' }
-              }}
-            >
+              }}>
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem key={page} onClick={handleClick}>
                   <Typography textAlign="center" data-testid={page}>
                     {/* {over ? '/' + page : page} */}
                   </Typography>
@@ -111,22 +109,40 @@ function ProfileTopAppBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}
-          >
+            }}>
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => {
               return (
-                <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'inherit', display: 'block' }}
-                  onMouseOver={() => setOverPage(page)}
-                  onMouseOut={() => setOverPage(null)}
-                >
-                  {overPage === page ? '/' + page : page}
-                </Button>
+                <>
+                  <Button
+                    key={page}
+                    onMouseEnter={handleClick}
+                    sx={{ my: 2, color: 'inherit', display: 'block' }}
+                    onMouseOver={() => setOverPage(page)}
+                    onMouseOut={() => setOverPage(null)}>
+                    {overPage === page ? '/' + page : page}
+                  </Button>
+                  <Menu
+                    id="demo-positioned-menu"
+                    aria-labelledby="demo-positioned-button"
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    // anchorOrigin={{
+                    //   vertical: 'top',
+                    //   horizontal: 'left'
+                    // }}
+                    transformOrigin={{
+                      vertical: 'top',
+                      horizontal: 'left'
+                    }}>
+                    <MenuItem onClick={handleClose}>Profile</MenuItem>
+                    <MenuItem onClick={handleClose}>My account</MenuItem>
+                    <MenuItem onClick={handleClose}>Logout</MenuItem>
+                  </Menu>
+                </>
               );
             })}
           </Box>
@@ -147,8 +163,7 @@ function ProfileTopAppBar() {
                 <a
                   href="https://drive.google.com/file/d/1TiuEILXBB5mKFQGa3twcOei7Ckj4b5lA/view"
                   target="_blank"
-                  rel="noreferrer"
-                >
+                  rel="noreferrer">
                   <FolderSharedIcon style={{ fontSize: 40, color: '#212121' }} />
                 </a>
               </Grid>
