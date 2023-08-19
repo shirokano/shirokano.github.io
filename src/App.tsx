@@ -40,8 +40,8 @@ function App() {
           <div className="App-hero-section">
             <Grid className="App-hero-container">
               <div className="App-hero-column">
-                <div className="Hero-msg">HELLO WORLD!</div>
-                <div className="Hero-msg--my-name">{"I'M SIMON"}</div>
+                <div className="Hero-msg">{'Running +'}</div>
+                <div className="Hero-msg--my-name">{'Code'}</div>
               </div>
             </Grid>
           </div>
