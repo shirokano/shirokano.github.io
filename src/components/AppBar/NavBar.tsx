@@ -55,7 +55,8 @@ function NavBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}>
+            }}
+          >
             {'mon_gohl'}
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -65,7 +66,8 @@ function NavBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleClick}
-              color="inherit">
+              color="inherit"
+            >
               <MenuIcon />
             </IconButton>
             <Menu
@@ -84,7 +86,8 @@ function NavBar() {
               onClose={handleClose}
               sx={{
                 display: { xs: 'block', md: 'none' }
-              }}>
+              }}
+            >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleClick}>
                   <Typography textAlign="center" data-testid={page}>
@@ -109,7 +112,8 @@ function NavBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}>
+            }}
+          >
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -120,7 +124,8 @@ function NavBar() {
                   onMouseEnter={handleClick}
                   className="nav-buttons"
                   onMouseOver={() => setOverPage(page)}
-                  onMouseOut={() => setOverPage(null)}>
+                  onMouseOut={() => setOverPage(null)}
+                >
                   {overPage === page ? '/' + page : page}
                 </Button>
               );
@@ -143,7 +148,8 @@ function NavBar() {
                 <a
                   href="https://drive.google.com/file/d/1TiuEILXBB5mKFQGa3twcOei7Ckj4b5lA/view"
                   target="_blank"
-                  rel="noreferrer">
+                  rel="noreferrer"
+                >
                   <FolderSharedIcon style={{ fontSize: 40, color: '#cdcdcd' }} />
                 </a>
               </Grid>
