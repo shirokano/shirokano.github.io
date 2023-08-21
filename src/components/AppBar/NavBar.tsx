@@ -14,11 +14,12 @@ import AdbIcon from '@mui/icons-material/Adb';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import FolderSharedIcon from '@mui/icons-material/FolderShared';
-import logo from '../s-logo.svg';
+import logo from '../../s-logo.svg';
+import './styles.scss';
 
 export const pages = ['CV', 'Blog', 'Me', 'Lab'];
 
-function ProfileTopAppBar() {
+function NavBar() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const [overPage, setOverPage] = React.useState<null | string>(null);
@@ -32,7 +33,7 @@ function ProfileTopAppBar() {
   };
 
   return (
-    <AppBar position="static" elevation={0} sx={{ borderBottom: 1, borderColor: '#eeeeee' }}>
+    <AppBar position="static" elevation={0} className="nav-bar">
       <Container maxWidth="xl">
         <Toolbar disableGutters variant="dense">
           <img
@@ -54,11 +55,9 @@ function ProfileTopAppBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}
-          >
+            }}>
             {'mon_gohl'}
           </Typography>
-
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -66,8 +65,7 @@ function ProfileTopAppBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleClick}
-              color="inherit"
-            >
+              color="inherit">
               <MenuIcon />
             </IconButton>
             <Menu
@@ -86,8 +84,7 @@ function ProfileTopAppBar() {
               onClose={handleClose}
               sx={{
                 display: { xs: 'block', md: 'none' }
-              }}
-            >
+              }}>
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleClick}>
                   <Typography textAlign="center" data-testid={page}>
@@ -112,43 +109,20 @@ function ProfileTopAppBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}
-          >
+            }}>
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => {
               return (
-                <>
-                  <Button
-                    key={page}
-                    onMouseEnter={handleClick}
-                    sx={{ my: 2, color: 'inherit', display: 'block' }}
-                    onMouseOver={() => setOverPage(page)}
-                    onMouseOut={() => setOverPage(null)}
-                  >
-                    {overPage === page ? '/' + page : page}
-                  </Button>
-                  <Menu
-                    id="demo-positioned-menu"
-                    aria-labelledby="demo-positioned-button"
-                    anchorEl={anchorEl}
-                    open={open}
-                    onClose={handleClose}
-                    // anchorOrigin={{
-                    //   vertical: 'top',
-                    //   horizontal: 'left'
-                    // }}
-                    transformOrigin={{
-                      vertical: 'top',
-                      horizontal: 'left'
-                    }}
-                  >
-                    <MenuItem onClick={handleClose}>Profile</MenuItem>
-                    <MenuItem onClick={handleClose}>My account</MenuItem>
-                    <MenuItem onClick={handleClose}>Logout</MenuItem>
-                  </Menu>
-                </>
+                <Button
+                  key={page}
+                  onMouseEnter={handleClick}
+                  className="nav-buttons"
+                  onMouseOver={() => setOverPage(page)}
+                  onMouseOut={() => setOverPage(null)}>
+                  {overPage === page ? '/' + page : page}
+                </Button>
               );
             })}
           </Box>
@@ -157,21 +131,20 @@ function ProfileTopAppBar() {
             <Grid container direction="row" justifyContent="bottom" alignItems="center" spacing={1}>
               <Grid item>
                 <a href="https://github.com/gohls" target="_blank" rel="noreferrer">
-                  <GitHubIcon style={{ fontSize: 30, color: '#212121' }} />
+                  <GitHubIcon style={{ fontSize: 30, color: '#cdcdcd' }} />
                 </a>
               </Grid>
               <Grid item>
                 <a href="https://www.linkedin.com/in/sagohl/" target="_blank" rel="noreferrer">
-                  <LinkedInIcon style={{ fontSize: 36, color: '#212121' }} />
+                  <LinkedInIcon style={{ fontSize: 36, color: '#cdcdcd' }} />
                 </a>
               </Grid>
               <Grid item>
                 <a
                   href="https://drive.google.com/file/d/1TiuEILXBB5mKFQGa3twcOei7Ckj4b5lA/view"
                   target="_blank"
-                  rel="noreferrer"
-                >
-                  <FolderSharedIcon style={{ fontSize: 40, color: '#212121' }} />
+                  rel="noreferrer">
+                  <FolderSharedIcon style={{ fontSize: 40, color: '#cdcdcd' }} />
                 </a>
               </Grid>
             </Grid>
@@ -181,4 +154,4 @@ function ProfileTopAppBar() {
     </AppBar>
   );
 }
-export default ProfileTopAppBar;
+export default NavBar;
