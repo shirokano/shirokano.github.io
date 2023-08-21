@@ -21,7 +21,6 @@ export const pages = ['CV', 'Blog', 'Me', 'Lab'];
 
 function NavBar() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
   const [overPage, setOverPage] = React.useState<null | string>(null);
 
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
