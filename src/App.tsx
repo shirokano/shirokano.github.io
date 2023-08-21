@@ -1,13 +1,13 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.scss';
-import ProfileTopAppBar from './components/ProfileNavBar';
+import NavBar from './components/AppBar/NavBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 
 const theme = createTheme({
   palette: {
-    primary: { main: '#ffffff', contrastText: '#212121' }
+    primary: { main: '#1a1b1e' }
   },
   components: {
     MuiToolbar: {
@@ -22,22 +22,23 @@ const theme = createTheme({
 });
 
 function App() {
+  const [text, setText] = React.useState<string>('');
+
+  const msg = 'This is a message';
+
+  setTimeout(() => {
+    setText(msg.slice(0, text.length + 1));
+  }, 500);
+  // clearTimeout(timeout);
+
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <ProfileTopAppBar />
         <header className="App-header"></header>
-
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        {/* <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer">
-            learn react
-          </a> */}
+        <NavBar />
         <div className="App-main-wrap">
           <div className="App-hero-section">
+            {text}
             <Grid className="App-hero-container">
               <div className="App-hero-column">
                 <div className="Hero-msg">{'Hello World!'}</div>
