@@ -1,0 +1,13 @@
+@use 'src/App';
+
+$off-white: hsla(0, 0%, 100%, 0.2);
+
+.nav-bar {
+  background-color: App.$main-color !important;
+  border-bottom: 1px solid $off-white;
+}
+ 
+.nav-buttons { 
+  color: #cdcdcd !important;
+  display: 'block'
+}

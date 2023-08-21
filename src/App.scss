@@ -1,3 +1,9 @@
+$main-color: #1a1b1e;
+
+:root {
+  background-color: $main-color;
+}
+
 @font-face {
   font-family: 'JetBrainsFont';
   src: local('JetBrainsFont'),
@@ -38,12 +44,11 @@
 
 
 .App-main-wrap {
-  // background-color: #1a1b1e;
+  // background-color: #f2f0ed;
 
   flex-direction: column;
   align-items: center;
   display: flex;
-
   box-sizing: border-box;
 }
 
