@@ -4,10 +4,17 @@ import './App.scss';
 import NavBar from './components/AppBar/NavBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
+import SectionDisplay from './components/common/SectionTypewriterDisplay';
+import { CssBaseline } from '@mui/material';
 
 const theme = createTheme({
   palette: {
-    primary: { main: '#1a1b1e' }
+    primary: {
+      main: '#f2f0ed'
+    },
+    background: {
+      default: '#f2f0ed'
+    }
   },
   components: {
     MuiToolbar: {
@@ -34,19 +41,31 @@ function App() {
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
-        <header className="App-header"></header>
-        <NavBar />
-        <div className="App-main-wrap">
-          <div className="App-hero-section">
-            {text}
-            <Grid className="App-hero-container">
-              <div className="App-hero-column">
-                <div className="Hero-msg">{'Hello World!'}</div>
-                <div className="Hero-msg--my-name">{'Code'}</div>
+        <CssBaseline>
+          <header className="App-header"></header>
+          <NavBar />
+          <div className="body-wrapper">
+            <div className="typing-block">
+              <span className="typing-line-1">
+                {'Hello World!'}
+                <br />
+                {"I'm Simon,"}
+                <br />
+                {'a Software Engineer'}
+              </span>
+            </div>
+            <div className="App-main-wrap">
+              <div className="App-hero-section">
+                <Grid className="App-hero-container">
+                  <div className="App-hero-column">
+                    <div className="Hero-msg">{'Hello World!'}</div>
+                    <div className="Hero-msg--my-name">{'Code'}</div>
+                  </div>
+                </Grid>
               </div>
-            </Grid>
+            </div>
           </div>
-        </div>
+        </CssBaseline>
       </ThemeProvider>
     </div>
   );
