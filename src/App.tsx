@@ -45,7 +45,7 @@ function App() {
           <header className="App-header"></header>
           <NavBar />
           <div className="body-wrapper">
-            <div className="typing-block">
+            <div data-testid="typing-block" className="typing-block">
               <span className="typing-line-1">
                 {'Hello World!'}
                 <br />
