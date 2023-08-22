@@ -1,8 +1,8 @@
-$main-color: #1a1b1e;
+// $main-color: #1a1b1e;
 
-:root {
-  background-color: $main-color;
-}
+// :root {
+//   background-color: $main-color;
+// }
 
 @font-face {
   font-family: 'JetBrainsFont';
@@ -10,6 +10,31 @@ $main-color: #1a1b1e;
          url('./fonts/JetBrains/JetBrainsMono-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
+}
+
+.body-wrapper {
+  // background-color: #f2f0ed;
+  padding: 1em 2em 2em;
+  flex-direction: column;
+  // align-items: center;
+  display: flex;
+  box-sizing: border-box;
+  background-color: inherit;
+}
+
+.typing-block {
+  min-height: 430px;
+  margin-top: 50px;
+  margin-bottom: 160px;
+}
+
+.typing-line-1 {
+  font-family: JetBrainsFont;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 101px;
+  font-weight: 700;
+  line-height: 105%;
 }
 
 /* .App {
@@ -43,14 +68,7 @@ $main-color: #1a1b1e;
 } */
 
 
-.App-main-wrap {
-  // background-color: #f2f0ed;
 
-  flex-direction: column;
-  align-items: center;
-  display: flex;
-  box-sizing: border-box;
-}
 
 .App-hero-section {
   z-index: 1;
