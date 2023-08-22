@@ -58,6 +58,7 @@ function App() {
               <div className="App-hero-section">
                 <Grid className="App-hero-container">
                   <div className="App-hero-column">
+                    <SectionDisplay />
                     <div className="Hero-msg">{'Hello World!'}</div>
                     <div className="Hero-msg--my-name">{'Code'}</div>
                   </div>
