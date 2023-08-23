@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // import logo from './logo.svg';
 import './App.scss';
 import NavBar from './components/AppBar/NavBar';
@@ -29,13 +29,30 @@ const theme = createTheme({
 });
 
 function App() {
-  const [text, setText] = React.useState<string>('');
+  const strings = ['Hello World!', "I'm Simon,", 'a Software Engineer'];
+  const [currentStringIndex, setCurrentStringIndex] = useState(0);
+  const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
 
-  const msg = 'This is a message';
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (currentLetterIndex < strings[currentStringIndex].length) {
+        setCurrentLetterIndex((prevIndex) => prevIndex + 1);
+      } else {
+        clearInterval(interval);
+        setTimeout(() => {
+          setCurrentStringIndex((prevIndex) => (prevIndex + 1) % strings.length);
+          setCurrentLetterIndex(0);
+        }, 1000); // Pause before next string
+      }
+    }, 100);
+    return () => clearInterval(interval);
+  }, [currentStringIndex, currentLetterIndex]);
 
-  setTimeout(() => {
-    setText(msg.slice(0, text.length + 1));
-  }, 500);
+  const currentString = strings[currentStringIndex];
+  const typedText = currentString.substring(0, currentLetterIndex);
+  const lastCharacter = typedText.charAt(typedText.length - 1);
+  const remainingText = typedText.slice(0, -1);
+
   // clearTimeout(timeout);
 
   return (
@@ -46,13 +63,11 @@ function App() {
           <NavBar />
           <div className="body-wrapper">
             <div data-testid="typing-block" className="typing-block">
-              <span className="typing-line-1">
-                {'Hello World!'}
-                <br />
-                {"I'm Simon,"}
-                <br />
-                {'a Software Engineer'}
-              </span>
+              <div className="typewriter">
+                {remainingText}
+                <span className="fading-letter">{lastCharacter}</span>
+                <span className="underscore">_</span>
+              </div>
             </div>
             <div className="App-main-wrap">
               <div className="App-hero-section">
