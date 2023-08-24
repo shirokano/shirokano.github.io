@@ -4,7 +4,7 @@ import './App.scss';
 import NavBar from './components/AppBar/NavBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
-import SectionDisplay from './components/common/SectionTypewriterDisplay';
+import Typewriter from './components/common/Typewriter';
 import { CssBaseline } from '@mui/material';
 
 const theme = createTheme({
@@ -29,32 +29,6 @@ const theme = createTheme({
 });
 
 function App() {
-  const strings = ['Hello World!', "I'm Simon,", 'a Software Engineer'];
-  const [currentStringIndex, setCurrentStringIndex] = useState(0);
-  const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (currentLetterIndex < strings[currentStringIndex].length) {
-        setCurrentLetterIndex((prevIndex) => prevIndex + 1);
-      } else {
-        clearInterval(interval);
-        setTimeout(() => {
-          setCurrentStringIndex((prevIndex) => (prevIndex + 1) % strings.length);
-          setCurrentLetterIndex(0);
-        }, 1000); // Pause before next string
-      }
-    }, 100);
-    return () => clearInterval(interval);
-  }, [currentStringIndex, currentLetterIndex]);
-
-  const currentString = strings[currentStringIndex];
-  const typedText = currentString.substring(0, currentLetterIndex);
-  const lastCharacter = typedText.charAt(typedText.length - 1);
-  const remainingText = typedText.slice(0, -1);
-
-  // clearTimeout(timeout);
-
   return (
     <div className="App">
       <ThemeProvider theme={theme}>
@@ -62,18 +36,11 @@ function App() {
           <header className="App-header"></header>
           <NavBar />
           <div className="body-wrapper">
-            <div data-testid="typing-block" className="typing-block">
-              <div className="typewriter">
-                {remainingText}
-                <span className="fading-letter">{lastCharacter}</span>
-                <span className="underscore">_</span>
-              </div>
-            </div>
+            <Typewriter msg={['Hello World!', "I'm Simon,", 'a Software Engineer']} />
             <div className="App-main-wrap">
               <div className="App-hero-section">
                 <Grid className="App-hero-container">
                   <div className="App-hero-column">
-                    <SectionDisplay />
                     <div className="Hero-msg">{'Hello World!'}</div>
                     <div className="Hero-msg--my-name">{'Code'}</div>
                   </div>
