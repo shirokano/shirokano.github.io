@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders learn react link', () => {
   render(<App />);
-  const typingBlock = screen.getByTestId('typing-block');
-  expect(typingBlock).toBeInTheDocument();
+  const helloWorld = screen.getByTestId('hello-world');
+  expect(helloWorld).toBeInTheDocument();
 });
