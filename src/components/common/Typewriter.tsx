@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './styles.scss';
 
 interface typewriterProps {
   msg: string[];
