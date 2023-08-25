@@ -20,7 +20,7 @@ function Typewriter({ msg }: typewriterProps) {
           setCurrentLetterIndex(0);
         }, 1000); // Pause before next string
       }
-    }, 100);
+    }, 50);
     return () => clearInterval(interval);
   }, [currentStringIndex, currentLetterIndex]);
 
