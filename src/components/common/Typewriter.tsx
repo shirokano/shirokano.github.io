@@ -18,7 +18,7 @@ function Typewriter({ msg }: typewriterProps) {
         setTimeout(() => {
           setCurrentStringIndex((prevIndex) => (prevIndex + 1) % msg.length);
           setCurrentLetterIndex(0);
-        }, 1000); // Pause before next string
+        }, 9000); // Pause before next string
       }
     }, 50);
     return () => clearInterval(interval);
