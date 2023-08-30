@@ -41,7 +41,7 @@ function App() {
               <div className="App-hero-section">
                 <Grid className="App-hero-container">
                   <div className="App-hero-column" data-testid="hello-world">
-                    <div className="Hero-msg">{'Hello World!'}</div>
+                    <div className="Hero-msg">{'Test'}</div>
                     <div className="Hero-msg--my-name">{'Code'}</div>
                   </div>
                 </Grid>
