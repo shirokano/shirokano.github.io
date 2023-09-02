@@ -1,5 +1,4 @@
 import React from 'react';
-// import logo from './logo.svg';
 import './App.scss';
 import NavBar from './components/AppBar/NavBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
