@@ -35,7 +35,7 @@ function App() {
           <header className="App-header"></header>
           <NavBar />
           <div className="body-wrapper">
-            <Typewriter msg={['Hello World!', "I'm Simon,", 'a Software Engineer']} />
+            <Typewriter msg={['Experience']} />
             <div className="App-main-wrap">
               <div className="App-hero-section">
                 <Grid className="App-hero-container">
