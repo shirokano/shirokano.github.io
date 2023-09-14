@@ -27,6 +27,8 @@ const theme = createTheme({
   }
 });
 
+const HERO_TEXT = ['Developer.', 'Student of life.', 'Humble.'];
+
 function App() {
   return (
     <div className="App">
@@ -35,13 +37,11 @@ function App() {
           <header className="App-header"></header>
           <NavBar />
           <div className="body-wrapper">
-            <Typewriter msg={['Experience']} />
+            <Typewriter textList={HERO_TEXT} />
             <div className="App-main-wrap">
               <div className="App-hero-section">
                 <Grid className="App-hero-container">
-                  <div className="App-hero-column" data-testid="experience">
-                    <div className="Hero-msg--my-name">{'Experience'}</div>
-                  </div>
+                  <div className="App-hero-column" data-testid="experience"></div>
                 </Grid>
               </div>
             </div>
