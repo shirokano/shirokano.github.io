@@ -1,22 +1,22 @@
 .typing-block {
   min-height: 430px;
-  margin-top: 50px;
+  margin-top: 40px;
   margin-bottom: 160px;
 }
 
 .typewriter {
   font-family: JetBrainsFont;
   font-style: normal;
-  font-weight: 500;
+  // font-weight: 500;
   font-size: 101px;
   font-weight: 700;
-  line-height: 105%;
-  
-  display: inline-block;
-  position: relative;
+  line-height: 10%;
+  // white-space: pre-wrap; /* Allow line breaks and preserve whitespace */
+  // display: inline-block;
+  // position: relative;
 }
 
-@keyframes fadeInOut {
+@keyframes blink {
   0%, 100% {
     opacity: 0;
   }
@@ -25,9 +25,10 @@
   }
 }
 
-.fading-letter {
+.blinking-underscore {
   opacity: 0;
-  animation: fadeInOut 1.5s ease infinite;
+  animation: blink .75s ease infinite;
+  
 }
 
 .underscore {
