@@ -1,0 +1,36 @@
+.typing-block {
+  min-height: 430px;
+  margin-top: 40px;
+  margin-bottom: 160px;
+}
+
+.typewriter {
+  font-family: JetBrainsFont;
+  font-style: normal;
+  // font-weight: 500;
+  font-size: 101px;
+  font-weight: 700;
+  line-height: 10%;
+  // white-space: pre-wrap; /* Allow line breaks and preserve whitespace */
+  // display: inline-block;
+  // position: relative;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.blinking-underscore {
+  opacity: 0;
+  animation: blink .75s ease infinite;
+  
+}
+
+.underscore {
+  opacity: 1;
+}

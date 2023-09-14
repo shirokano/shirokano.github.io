@@ -1,43 +1,60 @@
-import React, { useEffect, useState } from 'react';
-import './styles.scss';
+import React, { useState, useEffect } from 'react';
+import './Typewriter.scss'; // Import the SCSS file
 
-interface typewriterProps {
-  msg: string[];
+interface TextPrinterProps {
+  textList: string[];
 }
 
-function Typewriter({ msg }: typewriterProps) {
-  const [currentStringIndex, setCurrentStringIndex] = useState(0);
-  const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
+const TextPrinter = ({ textList }: TextPrinterProps) => {
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [currentCharIndex, setCurrentCharIndex] = useState(0);
+  const [outputText, setOutputText] = useState<string[]>(['']); // Initialize with an empty string
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      if (currentLetterIndex < msg[currentStringIndex].length) {
-        setCurrentLetterIndex((prevIndex) => prevIndex + 1);
-      } else {
-        clearInterval(interval);
-        setTimeout(() => {
-          setCurrentStringIndex((prevIndex) => (prevIndex + 1) % msg.length);
-          setCurrentLetterIndex(0);
-        }, 9000); // Pause before next string
+    const timer = setTimeout(() => {
+      if (currentTextIndex < textList.length) {
+        const currentText = textList[currentTextIndex];
+        if (currentCharIndex <= currentText.length) {
+          const newText = currentText.substring(0, currentCharIndex);
+          setOutputText((prevOutputText) => [
+            ...prevOutputText.slice(0, -1),
+            newText + (currentCharIndex < currentText.length ? '_' : '')
+          ]);
+          setCurrentCharIndex(currentCharIndex + 1);
+        } else if (currentTextIndex < textList.length - 1) {
+          // Move to the next string in the list and reset char index
+          setOutputText((prevOutputText) => [...prevOutputText, '']);
+          setCurrentCharIndex(0);
+          setCurrentTextIndex(currentTextIndex + 1);
+        } else if (currentCharIndex === textList[currentTextIndex].length + 1) {
+          // Add the underscore to the end of the last printed text
+          setOutputText((prevOutputText) => [
+            ...prevOutputText.slice(0, -1),
+            prevOutputText[prevOutputText.length - 1] + '_'
+          ]);
+        }
       }
-    }, 70); // Typing speed
-    return () => clearInterval(interval);
-  }, [currentStringIndex, currentLetterIndex]);
+    }, 100); // Adjust the speed at which characters are printed (in milliseconds)
 
-  const currentString = msg[currentStringIndex];
-  const typedText = currentString.substring(0, currentLetterIndex);
-  const lastCharacter = typedText.charAt(typedText.length - 1);
-  const remainingText = typedText.slice(0, -1);
+    return () => clearTimeout(timer);
+  }, [currentTextIndex, currentCharIndex, textList]);
 
   return (
-    <div data-testid="typing-block" className="typing-block">
-      <div className="typewriter">
-        {remainingText}
-        <span className="fading-letter">{lastCharacter}</span>
-        <span className="underscore">_</span>
-      </div>
+    <div className="typing-block">
+      {outputText.map((text, index) => (
+        <p key={index} className="typewriter">
+          {index === outputText.length - 1 ? (
+            <>
+              {text.substring(0, text.length - 1)}
+              <span className="blinking-underscore">{text.charAt(text.length - 1)}</span>
+            </>
+          ) : (
+            text
+          )}
+        </p>
+      ))}
     </div>
   );
-}
+};
 
-export default Typewriter;
+export default TextPrinter;
