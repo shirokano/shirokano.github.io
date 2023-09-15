@@ -6,7 +6,6 @@ interface TextPrinterProps {
 }
 
 const Typewriter = ({ textList }: TextPrinterProps) => {
-  const [text, setText] = useState<string[]>(textList);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [outputText, setOutputText] = useState<string[]>(['']);
@@ -15,13 +14,13 @@ const Typewriter = ({ textList }: TextPrinterProps) => {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if (currentTextIndex < text.length) {
-        const currentText = text[currentTextIndex];
+      if (currentTextIndex < textList.length) {
+        const currentText = textList[currentTextIndex];
         if (currentCharIndex <= currentText.length) {
           const newText = currentText.substring(0, currentCharIndex);
           setOutputText((prevOutputText) => [...prevOutputText.slice(0, -1), newText]);
           setCurrentCharIndex(currentCharIndex + 1);
-        } else if (currentTextIndex < text.length - 1) {
+        } else if (currentTextIndex < textList.length - 1) {
           // Move to the next string in the list and reset char index
           setOutputText((prevOutputText) => [...prevOutputText, '']);
           setCurrentCharIndex(0);
@@ -31,7 +30,7 @@ const Typewriter = ({ textList }: TextPrinterProps) => {
     }, 100); //Typing speed (in milliseconds)
 
     return () => clearTimeout(timer);
-  }, [currentTextIndex, currentCharIndex, text]);
+  }, [currentTextIndex, currentCharIndex, textList]);
 
   /**
    * @TODO WIP
