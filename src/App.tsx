@@ -36,10 +36,10 @@ const SUB_TEXT = [
 
 function App() {
   return (
-    <>
+    <div data-testid="main">
       <ThemeProvider theme={theme}>
         <CssBaseline>
-          <MenuBar data-testid="menu" />
+          <MenuBar />
           <Page>
             <>
               <Typewriter textList={HERO_TEXT} />
@@ -56,7 +56,7 @@ function App() {
           </Page>
         </CssBaseline>
       </ThemeProvider>
-    </>
+    </div>
   );
 }
 
