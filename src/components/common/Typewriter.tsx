@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Typewriter.scss'; // Import the SCSS file
+import { Grid } from '@mui/material';
 
 interface TextPrinterProps {
   textList: string[];
@@ -31,20 +32,35 @@ const Typewriter = ({ textList }: TextPrinterProps) => {
   }, [currentTextIndex, currentCharIndex, textList]);
 
   return (
-    <div className="typing-block">
-      {outputText.map((text, index) => (
-        <p key={index} className="typing-block--text">
-          {index === outputText.length - 1 ? (
-            <>
-              {text.substring(0, text.length)}
-              <span className="blinking-underscore">{'_'}</span>
-            </>
-          ) : (
-            <>{text}</>
-          )}
-        </p>
-      ))}
-    </div>
+    <Grid container>
+      <Grid item xs={6}>
+        <div className="typing-block">
+          {outputText.map((text, index) => (
+            <p key={index} className="typing-block--text">
+              {index === outputText.length - 1 ? (
+                <>
+                  {text.substring(0, text.length)}
+                  <span className="blinking-underscore">{'_'}</span>
+                </>
+              ) : (
+                <>{text}</>
+              )}
+            </p>
+          ))}
+          <p className="typing-block--subtext">
+            I aspire to construct impactful projects and features within the product, embracing
+            challenges as opportunities for growth. Equally significant to me is fostering a
+            positive and enriching work culture.
+          </p>
+        </div>
+      </Grid>
+      <Grid item xs={6}>
+        <div className="image-container">
+          <div className="circle"></div>
+          {/* <img src="/images/me.png" alt="Picture of me" className="overlay-image" /> */}
+        </div>
+      </Grid>
+    </Grid>
   );
 };
 
