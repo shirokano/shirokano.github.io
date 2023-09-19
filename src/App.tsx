@@ -29,10 +29,10 @@ const theme = createTheme({
 
 // Each element is put on a newline
 const HERO_TEXT = ['Developer.', 'Student of life.', 'Humble.'];
-const SUB_TEXT = [
-  'I aspire to construct impactful projects and features within the product, embracing challenges as',
-  'opportunities for growth. Equally significant to me is fostering a positive and enriching work culture.'
-];
+// const SUB_TEXT = [
+//   'I aspire to construct impactful projects and features within the product, embracing challenges as',
+//   'opportunities for growth. Equally significant to me is fostering a positive and enriching work culture.'
+// ];
 
 function App() {
   return (
