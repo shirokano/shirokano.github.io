@@ -43,14 +43,14 @@ function MenuBar() {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'JetBrainsFont',
+              fontFamily: 'JetBrains-font',
               fontWeight: 700,
               letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none'
             }}
           >
-            <>{'/-/imon'}</>
+            <>{'imon'}</>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton

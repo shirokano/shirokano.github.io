@@ -12,10 +12,28 @@ code {
 }
 
 @font-face {
-  font-family: 'JetBrainsFont';
+  font-family: 'JetBrains-font';
   src:
-    local('JetBrainsFont'),
+    local('JetBrains-font'),
     url('./fonts/JetBrains/JetBrainsMono-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Futura-font';
+  src:
+    local('Futura-font'),
+    url('./fonts/Futura/FuturaCyrillicDemi.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto-font';
+  src:
+    local('Noto-font'),
+    url('./fonts/Noto/NotoSerif-Regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
