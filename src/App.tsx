@@ -36,17 +36,16 @@ const SUB_TEXT = [
 
 function App() {
   return (
-    <div>
+    <>
       <ThemeProvider theme={theme}>
         <CssBaseline>
-          <MenuBar />
+          <MenuBar data-testid="menu" />
           <Page>
             <>
               <Typewriter textList={HERO_TEXT} />
               {/* <LookingFor textList={SUB_TEXT} /> */}
             </>
           </Page>
-
           <Page>
             <div style={{ backgroundColor: 'green', height: '100vh', paddingTop: 50 }}>
               Whatever
@@ -57,7 +56,7 @@ function App() {
           </Page>
         </CssBaseline>
       </ThemeProvider>
-    </div>
+    </>
   );
 }
 
