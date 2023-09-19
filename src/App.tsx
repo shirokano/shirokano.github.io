@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.scss';
-import NavBar from './components/AppBar/NavBar';
+import MenuBar from './components/MenuBar/MenuBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Grid from '@mui/material/Grid';
 import Typewriter from './components/common/Typewriter';
 import { CssBaseline } from '@mui/material';
+import Page from './components/common/Page';
 
 const theme = createTheme({
   palette: {
@@ -27,25 +27,33 @@ const theme = createTheme({
   }
 });
 
+// Each element is put on a newline
 const HERO_TEXT = ['Developer.', 'Student of life.', 'Humble.'];
+// const SUB_TEXT = [
+//   'I aspire to construct impactful projects and features within the product, embracing challenges as',
+//   'opportunities for growth. Equally significant to me is fostering a positive and enriching work culture.'
+// ];
 
 function App() {
   return (
-    <div className="App">
+    <div data-testid="main">
       <ThemeProvider theme={theme}>
         <CssBaseline>
-          <header className="App-header"></header>
-          <NavBar />
-          <div className="body-wrapper">
-            <Typewriter textList={HERO_TEXT} />
-            <div className="App-main-wrap">
-              <div className="App-hero-section">
-                <Grid className="App-hero-container">
-                  <div className="App-hero-column" data-testid="experience"></div>
-                </Grid>
-              </div>
+          <MenuBar />
+          <Page>
+            <>
+              <Typewriter textList={HERO_TEXT} />
+              {/* <LookingFor textList={SUB_TEXT} /> */}
+            </>
+          </Page>
+          <Page>
+            <div style={{ backgroundColor: 'green', height: '100vh', paddingTop: 50 }}>
+              Whatever
             </div>
-          </div>
+          </Page>
+          <Page>
+            <div style={{ backgroundColor: 'blue', height: '100vh', paddingTop: 50 }}>This</div>
+          </Page>
         </CssBaseline>
       </ThemeProvider>
     </div>
