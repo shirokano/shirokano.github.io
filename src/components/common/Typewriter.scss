@@ -1,19 +1,36 @@
+$base-line-height: 10%;
+
 .typing-block {
   min-height: 430px;
-  margin-top: 40px;
   margin-bottom: 160px;
-}
+  position: fixed;
 
-.typewriter {
-  font-family: JetBrainsFont;
-  font-style: normal;
-  // font-weight: 500;
-  font-size: 101px;
-  font-weight: 700;
-  line-height: 10%;
-  // white-space: pre-wrap; /* Allow line breaks and preserve whitespace */
-  // display: inline-block;
-  // position: relative;
+  &--text {
+    font-family: JetBrainsFont;
+    font-style: normal;
+    font-size: calc(4.2 * (1.5vh + 1.1vw));
+    font-weight: 700;
+    padding: 3px 0;
+    line-height: $base-line-height; 
+  
+    @media screen and (max-width: 768px) {
+      &:first-child {
+        line-height: $base-line-height - 155;
+      }
+      &:nth-child(2) {
+        line-height: $base-line-height + 75; 
+      }
+    }
+  
+    @media screen and (max-width: 480px) {
+      &:last-child {
+        line-height: $base-line-height - 55; 
+      }
+      &:nth-child(2) {
+        line-height: $base-line-height + 75; 
+      }
+    }
+  }
 }
 
 @keyframes blink {
@@ -27,10 +44,5 @@
 
 .blinking-underscore {
   opacity: 0;
-  animation: blink .75s ease infinite;
-  
-}
-
-.underscore {
-  opacity: 1;
+  animation: blink .75s ease infinite; 
 }
