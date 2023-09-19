@@ -13,13 +13,12 @@ import Grid from '@mui/material/Grid';
 import AdbIcon from '@mui/icons-material/Adb';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import FolderSharedIcon from '@mui/icons-material/FolderShared';
 import logo from '../../s-logo.svg';
-import './styles.scss';
+import './MenuBar.scss';
 
-export const pages = ['CV', 'Blog', 'Me', 'Lab'];
+export const pages = ['Blog', 'Lab'];
 
-function NavBar() {
+function MenuBar() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [overPage, setOverPage] = React.useState<null | string>(null);
 
@@ -32,14 +31,14 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="static" elevation={0} className="nav-bar">
+    <AppBar position="sticky" elevation={0}>
       <Container maxWidth="xl">
         <Toolbar disableGutters variant="dense">
           <img
             src={logo}
             className="my-logo"
             alt="logo"
-            style={{ maxHeight: '50%', paddingRight: 5, borderRadius: '5px', color: '#212121' }}
+            style={{ maxHeight: '100%', paddingRight: 5, color: '#212121' }}
           />
           <Typography
             variant="h6"
@@ -49,14 +48,13 @@ function NavBar() {
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
+              fontFamily: 'JetBrainsFont',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}
-          >
-            {'mon_gohl'}
+            }}>
+            {'mon.Gohl'}
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -65,8 +63,7 @@ function NavBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleClick}
-              color="inherit"
-            >
+              color="inherit">
               <MenuIcon />
             </IconButton>
             <Menu
@@ -85,8 +82,7 @@ function NavBar() {
               onClose={handleClose}
               sx={{
                 display: { xs: 'block', md: 'none' }
-              }}
-            >
+              }}>
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleClick}>
                   <Typography textAlign="center" data-testid={page}>
@@ -111,8 +107,7 @@ function NavBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}
-          >
+            }}>
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -123,8 +118,7 @@ function NavBar() {
                   onMouseEnter={handleClick}
                   className="nav-buttons"
                   onMouseOver={() => setOverPage(page)}
-                  onMouseOut={() => setOverPage(null)}
-                >
+                  onMouseOut={() => setOverPage(null)}>
                   {overPage === page ? '/' + page : page}
                 </Button>
               );
@@ -143,15 +137,6 @@ function NavBar() {
                   <LinkedInIcon style={{ fontSize: 36, color: '#cdcdcd' }} />
                 </a>
               </Grid>
-              <Grid item>
-                <a
-                  href="https://drive.google.com/file/d/1TiuEILXBB5mKFQGa3twcOei7Ckj4b5lA/view"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FolderSharedIcon style={{ fontSize: 40, color: '#cdcdcd' }} />
-                </a>
-              </Grid>
             </Grid>
           </Box>
         </Toolbar>
@@ -159,4 +144,4 @@ function NavBar() {
     </AppBar>
   );
 }
-export default NavBar;
+export default MenuBar;
