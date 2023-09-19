@@ -2,13 +2,17 @@
 
 $off-white: #cdcdcd;
 
-.nav-bar {
+.menu-bar {
   // background-color: App.$main-color !important;
   border-bottom: 1px solid $off-white;
   z-index: 1000;
-}
- 
-.nav-buttons { 
-  color: $off-white !important;
+
+  &--logo {
+    height: 100%;
+  }
+
+  &--buttons {
+    color: $off-white !important;
   display: 'block'
+  }
 }

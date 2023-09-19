@@ -32,14 +32,9 @@ function MenuBar() {
 
   return (
     <AppBar position="sticky" elevation={0}>
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" disableGutters={true}>
         <Toolbar disableGutters variant="dense">
-          <img
-            src={logo}
-            className="my-logo"
-            alt="logo"
-            style={{ maxHeight: '100%', paddingRight: 5, color: '#212121' }}
-          />
+          <img src={logo} className="menu-bar--logo" alt="logo" />
           <Typography
             variant="h6"
             noWrap
@@ -53,9 +48,8 @@ function MenuBar() {
               letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}
-          >
-            {'mon.Gohl'}
+            }}>
+            <>{'/-/imon'}</>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -64,8 +58,7 @@ function MenuBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleClick}
-              color="inherit"
-            >
+              color="inherit">
               <MenuIcon />
             </IconButton>
             <Menu
@@ -84,8 +77,7 @@ function MenuBar() {
               onClose={handleClose}
               sx={{
                 display: { xs: 'block', md: 'none' }
-              }}
-            >
+              }}>
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleClick}>
                   <Typography textAlign="center" data-testid={page}>
@@ -110,8 +102,7 @@ function MenuBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}
-          >
+            }}>
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -120,10 +111,9 @@ function MenuBar() {
                 <Button
                   key={page}
                   onMouseEnter={handleClick}
-                  className="nav-buttons"
+                  className="menu-bar--buttons"
                   onMouseOver={() => setOverPage(page)}
-                  onMouseOut={() => setOverPage(null)}
-                >
+                  onMouseOut={() => setOverPage(null)}>
                   {overPage === page ? '/' + page : page}
                 </Button>
               );
