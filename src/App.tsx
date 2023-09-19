@@ -9,10 +9,10 @@ import Page from './components/common/Page';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#f2f0ed'
+      main: '#fefefb'
     },
     background: {
-      default: '#f2f0ed'
+      default: '#fefefb'
     }
   },
   components: {
@@ -36,10 +36,11 @@ const HERO_TEXT = ['Developer.', 'Student of life.', 'Humble.'];
 
 function App() {
   return (
-    <div data-testid="main">
+    <div className="layout" data-testid="main">
       <ThemeProvider theme={theme}>
         <CssBaseline>
           <MenuBar />
+          <div className="spacer" />
           <Page>
             <>
               <Typewriter textList={HERO_TEXT} />
