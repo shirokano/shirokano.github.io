@@ -53,7 +53,8 @@ function MenuBar() {
               letterSpacing: '.1rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}>
+            }}
+          >
             {'mon.Gohl'}
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -63,7 +64,8 @@ function MenuBar() {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleClick}
-              color="inherit">
+              color="inherit"
+            >
               <MenuIcon />
             </IconButton>
             <Menu
@@ -82,7 +84,8 @@ function MenuBar() {
               onClose={handleClose}
               sx={{
                 display: { xs: 'block', md: 'none' }
-              }}>
+              }}
+            >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleClick}>
                   <Typography textAlign="center" data-testid={page}>
@@ -107,7 +110,8 @@ function MenuBar() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none'
-            }}>
+            }}
+          >
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
@@ -118,7 +122,8 @@ function MenuBar() {
                   onMouseEnter={handleClick}
                   className="nav-buttons"
                   onMouseOver={() => setOverPage(page)}
-                  onMouseOut={() => setOverPage(null)}>
+                  onMouseOut={() => setOverPage(null)}
+                >
                   {overPage === page ? '/' + page : page}
                 </Button>
               );
