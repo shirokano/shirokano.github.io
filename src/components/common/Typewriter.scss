@@ -1,7 +1,10 @@
-$base-line-height: 10%;
+$base-line-height: 90%;
+$font-size: 5rem;
 
 .typing-block {
-  min-height: 430px;
+  min-height: 4em; /* Adjust the minimum height as needed */
+  max-height: 4em;
+  // min-height: 430px;
   margin-bottom: 160px;
   position: fixed;
 
@@ -9,31 +12,28 @@ $base-line-height: 10%;
     color: rgba(23, 32, 62, 1);
     font-family: Futura-font;
     font-style: normal;
-    font-size: 5rem;
+    font-size: $font-size;
     // font-size: calc((4.2 * (1.5vh + 1.1vw))/2);
     // font-weight: 600;
     padding: 3px 0;
-    margin-top: 0;
+    margin: 0;
     line-height: $base-line-height; 
     // line-height: 6rem;
   
     @media screen and (max-width: 768px) {
-      &:first-child {
-        line-height: $base-line-height - 155;
-      }
       &:nth-child(2) {
-        line-height: $base-line-height + 75; 
+        line-height: $base-line-height + 20%; 
       }
     }
   
-    @media screen and (max-width: 480px) {
-      &:last-child {
-        line-height: $base-line-height - 55; 
-      }
-      &:nth-child(2) {
-        line-height: $base-line-height + 75; 
-      }
-    }
+    // @media screen and (max-width: 480px) {
+    //   &:last-child {
+    //     font-size: $font-size - 2;
+    //   }
+    //   // &:nth-child(2) {
+    //   //   line-height: $base-line-height + 75; 
+    //   // }
+    // }
   }
 
   &--subtext {
@@ -45,13 +45,19 @@ $base-line-height: 10%;
     // // font-weight: 600;
     // padding: 3px 0;
     // line-height: $base-line-height;
+
+    position: fixed;
     
     font-family: Noto-font;
     font-size: 1.25rem;
     line-height: 2rem;
-    margin-top: 16px;
+    margin-top: 17rem;
     max-width: 570px;
     width: 100%;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 22rem;
+    }
   }
 }
 
