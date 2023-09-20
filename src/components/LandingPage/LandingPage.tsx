@@ -19,7 +19,7 @@ const LandingPage = () => {
       </Grid>
       <Grid item xs={6}>
         <div className="image-container">
-          <div className="circle"></div>
+          {/* <div className="circle"></div> */}
           {/* <img src="/images/me.png" alt="Picture of me" className="overlay-image" /> */}
         </div>
       </Grid>
