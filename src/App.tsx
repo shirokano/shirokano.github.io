@@ -5,6 +5,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typewriter from './components/common/Typewriter';
 import { CssBaseline } from '@mui/material';
 import Page from './components/common/Page';
+import Experience from './components/Experience/Experience';
+import LandingPage from './components/LandingPage/LandingPage';
 
 const theme = createTheme({
   palette: {
@@ -43,13 +45,14 @@ function App() {
           <div className="spacer" />
           <Page>
             <>
-              <Typewriter textList={HERO_TEXT} />
+              {/* <Typewriter textList={HERO_TEXT} /> */}
+              <LandingPage />
               {/* <LookingFor textList={SUB_TEXT} /> */}
             </>
           </Page>
           <Page>
-            <div style={{ backgroundColor: 'green', height: '100vh', paddingTop: 50 }}>
-              Whatever
+            <div style={{ backgroundColor: '#efefec', height: '100vh', paddingTop: 50 }}>
+              <Experience />
             </div>
           </Page>
           <Page>
