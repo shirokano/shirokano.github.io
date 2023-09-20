@@ -1,4 +1,4 @@
-import React, { ReactElement, useRef } from 'react';
+import React from 'react';
 import './Experience.scss';
 import { Chip, Grid, Stack } from '@mui/material';
 
@@ -60,7 +60,6 @@ function Experience() {
           <br />
         </Stack>
       </Grid>
-
       <Grid item xs={3}>
         {technologies.map((tech, index) => {
           return <Chip label={tech} key={index} sx={{ margin: 0.2 }} />;
