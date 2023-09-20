@@ -2,7 +2,6 @@ import React from 'react';
 import './App.scss';
 import MenuBar from './components/MenuBar/MenuBar';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Typewriter from './components/common/Typewriter';
 import { CssBaseline } from '@mui/material';
 import Page from './components/common/Page';
 import Experience from './components/Experience/Experience';
@@ -30,7 +29,7 @@ const theme = createTheme({
 });
 
 // Each element is put on a newline
-const HERO_TEXT = ['Developer.', 'Student of life.', 'Humble.'];
+// const HERO_TEXT = ['Developer.', 'Student of life.', 'Humble.'];
 // const SUB_TEXT = [
 //   'I aspire to construct impactful projects and features within the product, embracing challenges as',
 //   'opportunities for growth. Equally significant to me is fostering a positive and enriching work culture.'

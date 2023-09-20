@@ -1,7 +1,6 @@
 import React, { ReactElement, useRef } from 'react';
 import './Experience.scss';
-import { Box, Chip, Grid, Stack } from '@mui/material';
-import Typewriter from '../common/Typewriter';
+import { Chip, Grid, Stack } from '@mui/material';
 
 // interface ExperienceProps {
 //   children: ReactElement;

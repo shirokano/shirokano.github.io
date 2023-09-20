@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './Typewriter.scss'; // Import the SCSS file
-import { Grid } from '@mui/material';
 
 interface TextPrinterProps {
   textList: string[];
