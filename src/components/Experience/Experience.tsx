@@ -2,10 +2,6 @@ import React, { ReactElement, useRef } from 'react';
 import './Experience.scss';
 import { Chip, Grid, Stack } from '@mui/material';
 
-// interface ExperienceProps {
-//   children: ReactElement;
-// }
-
 function Experience() {
   const technologies = [
     'React',
