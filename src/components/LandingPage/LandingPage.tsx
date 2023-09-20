@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import './LandingPage.scss'; // Import the SCSS file
 import { Grid } from '@mui/material';
 import Typewriter from '../common/Typewriter';
