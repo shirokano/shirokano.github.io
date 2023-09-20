@@ -5,6 +5,7 @@ import Typewriter from '../common/Typewriter';
 
 const LandingPage = () => {
   const heroText = ['Developer.', 'Student of life.', 'Humble.'];
+
   return (
     <Grid container>
       <Grid item xs={6}>
