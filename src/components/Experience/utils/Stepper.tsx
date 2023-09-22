@@ -6,7 +6,7 @@ import StepButton from '@mui/material/StepButton';
 import { PageContext } from '../../common/PageContext';
 
 interface VerticalStepperProps {
-  setSelected: any;
+  setSelected: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const steps = ['', '', ''];
@@ -14,7 +14,7 @@ const steps = ['', '', ''];
 export default function VerticalStepper({ setSelected }: VerticalStepperProps) {
   const [isPageAtTop] = useContext(PageContext);
   const [activeStep, setActiveStep] = useState(0);
-  const [completed, setCompleted] = useState<{ [k: number]: boolean }>({});
+  const [completed] = useState<{ [k: number]: boolean }>({});
 
   const totalSteps = () => {
     return steps.length;
