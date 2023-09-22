@@ -75,7 +75,8 @@ function MenuBar() {
                 vertical: 'top',
                 horizontal: 'left'
               }}
-              open={Boolean(anchorEl)}
+              // open={Boolean(anchorEl)}
+              open={false}
               onClose={handleClose}
               sx={{
                 display: { xs: 'block', md: 'none' }

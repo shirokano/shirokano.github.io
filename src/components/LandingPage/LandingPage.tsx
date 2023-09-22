@@ -1,7 +1,7 @@
 import React from 'react';
 import './LandingPage.scss'; // Import the SCSS file
 import { Grid } from '@mui/material';
-import Typewriter from '../common/Typewriter';
+import Typewriter from './utils/Typewriter';
 
 const LandingPage = () => {
   const heroText = ['Developer.', 'Student of life.', 'Humble.'];
