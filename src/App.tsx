@@ -6,6 +6,7 @@ import { CssBaseline } from '@mui/material';
 import Page from './components/common/Page';
 import Experience from './components/Experience/Experience';
 import LandingPage from './components/LandingPage/LandingPage';
+import Achievments from './components/Achievements/Achievements';
 
 const theme = createTheme({
   palette: {
@@ -43,19 +44,17 @@ function App() {
           <MenuBar />
           <div className="spacer" />
           <Page>
-            <>
-              {/* <Typewriter textList={HERO_TEXT} /> */}
-              <LandingPage />
-              {/* <LookingFor textList={SUB_TEXT} /> */}
-            </>
+            <LandingPage />
           </Page>
           <Page>
-            <div style={{ backgroundColor: '#efefec', height: '100vh', paddingTop: 50 }}>
+            <div className="experience">
               <Experience />
             </div>
           </Page>
           <Page>
-            <div style={{ backgroundColor: 'blue', height: '100vh', paddingTop: 50 }}>This</div>
+            <div className="projects">
+              <Achievments />
+            </div>
           </Page>
         </CssBaseline>
       </ThemeProvider>
