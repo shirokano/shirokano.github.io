@@ -16,3 +16,8 @@ I've set up a GitHub workflow to work its magic by running tests and keeping our
 - `React`
 - `Typescript`
 - `Bash`
+
+## To-Do
+
+- [ ] impl Linkedin API calls to get information
+- [ ] impl Github API calls to get information
