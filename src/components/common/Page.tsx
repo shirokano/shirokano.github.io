@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { PageContext } from './PageContext';
 import './Page.scss';
 
@@ -13,7 +13,7 @@ function Page({ children }: PageProviderProps) {
   useEffect(() => {
     const pageRefDiv = pageRef.current;
     const observer = new IntersectionObserver(
-      (entries, _) => {
+      (entries) => {
         const entry = entries[0];
         setIsPageAtTop(entry.isIntersecting);
       },

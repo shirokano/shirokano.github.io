@@ -20,23 +20,23 @@ export default function VerticalStepper({ setSelected }: VerticalStepperProps) {
     return steps.length;
   };
 
-  const completedSteps = () => {
-    return Object.keys(completed).length;
-  };
+  // const completedSteps = () => {
+  //   return Object.keys(completed).length;
+  // };
 
   const isLastStep = () => {
     return activeStep === totalSteps() - 1;
   };
 
-  const allStepsCompleted = () => {
-    return completedSteps() === totalSteps();
-  };
+  // const allStepsCompleted = () => {
+  //   return completedSteps() === totalSteps();
+  // };
 
   const handleNext = () => {
-    const newActiveStep =
-      isLastStep() && !allStepsCompleted()
-        ? steps.findIndex((step, i) => !(i in completed))
-        : activeStep + 1;
+    const newActiveStep = isLastStep()
+      ? // && !allStepsCompleted()
+        steps.findIndex((step, i) => !(i in completed))
+      : activeStep + 1;
     setActiveStep(newActiveStep);
     setSelected(newActiveStep);
   };
@@ -52,17 +52,17 @@ export default function VerticalStepper({ setSelected }: VerticalStepperProps) {
     setSelected(step);
   };
 
-  const handleComplete = () => {
-    const newCompleted = completed;
-    newCompleted[activeStep] = true;
-    setCompleted(newCompleted);
-    handleNext();
-  };
+  // const handleComplete = () => {
+  //   const newCompleted = completed;
+  //   newCompleted[activeStep] = true;
+  //   setCompleted(newCompleted);
+  //   handleNext();
+  // };
 
-  const handleReset = () => {
-    setActiveStep(0);
-    setCompleted({});
-  };
+  // const handleReset = () => {
+  //   setActiveStep(0);
+  //   setCompleted({});
+  // };
 
   const handleWheel = (e: WheelEvent) => {
     /* eslint-disable no-debugger */
