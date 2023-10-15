@@ -70,7 +70,7 @@ export default function VerticalStepper({ setSelected }: VerticalStepperProps) {
     if (isPageAtTop) {
       if (e.deltaY > 0 && activeStep !== steps.length - 1) {
         /* eslint-disable no-debugger */
-        debugger;
+        // debugger;
         handleNext();
       } else if (e.deltaY < 0 && activeStep !== 0) {
         /* eslint-disable no-debugger */
