@@ -1,14 +1,15 @@
 import React from 'react';
 import './Certs.scss';
 import Card from '../utils/Card';
+import { achievements } from '../../texts/projects';
 
 function Certs() {
   return (
     <>
       <div className="achievements--card--section-title">CERTS</div>
-      <Card />
-      <Card />
-      <Card />
+      {achievements.certs.map((cert, index) => (
+        <Card key={index} title={cert.title} description={cert.description} link={cert.link} />
+      ))}
     </>
   );
 }

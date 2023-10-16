@@ -7,6 +7,7 @@ import Page from './components/common/Page';
 import Experience from './components/Experience/Experience';
 import LandingPage from './components/LandingPage/LandingPage';
 import Achievments from './components/Achievements/Achievements';
+import Footer from './components/Footer/Footer';
 
 const theme = createTheme({
   palette: {
@@ -56,6 +57,7 @@ function App() {
               <Achievments />
             </div>
           </Page>
+          <Footer />
         </CssBaseline>
       </ThemeProvider>
     </div>

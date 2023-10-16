@@ -19,5 +19,9 @@ I've set up a GitHub workflow to work its magic by running tests and keeping our
 
 ## To-Do
 
-- [ ] impl Linkedin API calls to get information
-- [ ] impl Github API calls to get information
+- [ ] Impl Linkedin API calls to get information
+- [ ] Impl Github API calls to get information
+- [ ] Clean-up + Optimize
+- [ ] Make mobile friendly
+- [ ] Update theme (add more colors)
+- [ ] Add "Blog" + "Lab" pages

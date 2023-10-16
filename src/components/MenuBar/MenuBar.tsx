@@ -125,17 +125,16 @@ function MenuBar() {
               );
             })}
           </Box>
-
           <Box sx={{ flexGrow: 0 }}>
             <Grid container direction="row" justifyContent="bottom" alignItems="center" spacing={1}>
               <Grid item>
                 <a href="https://github.com/gohls" target="_blank" rel="noreferrer">
-                  <GitHubIcon style={{ fontSize: 30, color: '#cdcdcd' }} />
+                  <GitHubIcon style={{ fontSize: 30, color: 'rgb(23, 32, 62)' }} />
                 </a>
               </Grid>
               <Grid item>
                 <a href="https://www.linkedin.com/in/sagohl/" target="_blank" rel="noreferrer">
-                  <LinkedInIcon style={{ fontSize: 36, color: '#cdcdcd' }} />
+                  <LinkedInIcon style={{ fontSize: 36, color: 'rgb(23, 32, 62)' }} />
                 </a>
               </Grid>
             </Grid>
