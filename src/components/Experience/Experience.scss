@@ -1,22 +1,3 @@
-// .experience { 
-
-// }
-// .card {
-//   height: 100vh;
-// }
-
-// .carda {
-//   background: orange;
-// }
-
-// .cardb {
-//   background: lightblue;
-// }
-
-// .cardc {
-//   background: silver;
-// }
-
 .experience {
 
   &--section-title {
@@ -24,16 +5,17 @@
     opacity: 0.5;
     font-size: 1.5em;
     font-family: Futura-font, Arial, sans-serif;
+    
     // font-weight: 600;
     // margin-bottom: 20px;
-    // margin-top: 12px;
+    margin-top: 50px;
   }
 
   &--position-title {
     color: rgba(23, 32, 62, 1);
     font-family: Futura-font;
     font-style: normal;
-    font-size: 2em;
+    font-size: 1.8em;
     // font-size: calc((4.2 * (1.5vh + 1.1vw))/2);
     // font-weight: 600;
     // padding: 3px 0;
@@ -73,9 +55,7 @@
 
   &--highlights {
     font-family: Noto-font, Arial, sans-serif;
-    font-size: 1rem;
+    font-size: .8rem;
     line-height: 2rem;
   }
 }
-
-// :root { }
