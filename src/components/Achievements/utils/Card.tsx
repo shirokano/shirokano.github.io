@@ -7,7 +7,7 @@ import CardContent from '@mui/material/CardContent';
 // import CardMedia from '@mui/material/CardMedia';
 // import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
-import { achievements } from '../../texts/projects';
+// import { achievements } from '../../texts/projects';
 
 interface CardProps {
   title: string;

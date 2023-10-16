@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Experience.scss';
 import { Divider, Grid, Stack } from '@mui/material';
 import { experience } from '../texts/experience';
