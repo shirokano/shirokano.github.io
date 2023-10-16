@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './Experience.scss';
-import { Chip, Collapse, Divider, Grid, Stack } from '@mui/material';
+import { Divider, Grid, Stack } from '@mui/material';
 import { experience } from '../texts/experience';
 
 function Experience() {
-  const [isCurrentSelectedExperience, setIsCurrentSelectedExperience] = useState<number>(0);
+  // const [isCurrentSelectedExperience, setIsCurrentSelectedExperience] = useState<number>(0);
 
   return (
     <div className={'experience'}>
