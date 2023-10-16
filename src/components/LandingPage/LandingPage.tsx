@@ -40,7 +40,8 @@ const LandingPage = () => {
         <div className={`fade-in ${isVisible ? 'active' : ''}`}>
           <Card
             raised={false}
-            sx={{ display: 'flex', background: '#fefefb', position: 'fixed', maxWidth: '640px' }}>
+            sx={{ display: 'flex', background: '#fefefb', position: 'fixed', maxWidth: '640px' }}
+          >
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
               <CardContent sx={{ flex: '1 0 auto' }}>
                 <div className="experience--position-title">ABOUT ME</div>
