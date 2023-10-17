@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './LandingPage.scss'; // Import the SCSS file
-import { Box, Card, CardContent, CardMedia, Grid, Stack, Typography } from '@mui/material';
+import { Grid, Typography } from '@mui/material';
 import Typewriter from './utils/Typewriter';
 import ComputerMonitor from './utils/ComputerMonitor';
 // import MatrixEffect from './utils/MatrixEffect';
