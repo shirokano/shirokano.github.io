@@ -25,7 +25,8 @@ const LandingPage = () => {
             color="text.secondary"
             component="div"
             paragraph
-            sx={{ fontSize: '1.25rem' }}>
+            sx={{ fontSize: '1.25rem' }}
+          >
             I aspire to construct impactful projects and features within the product, embracing
             challenges as opportunities for growth. Equally significant to me is fostering a
             positive and enriching work culture.
@@ -43,7 +44,8 @@ const LandingPage = () => {
               maxWidth: '640px'
               // textAlign: 'justify',
               // textJustify: 'inter-word'
-            }}>
+            }}
+          >
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
               <CardContent sx={{ flex: '1 0 auto' }}>
                 <div className="experience--position-title">ABOUT ME</div>
