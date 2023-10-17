@@ -29,7 +29,8 @@ const LandingPage = () => {
               color="text.secondary"
               component="div"
               paragraph
-              sx={{ fontSize: '1.25rem', color: 'rgba(0, 0, 0, 0.8)' }}>
+              sx={{ fontSize: '1.25rem', color: 'rgba(0, 0, 0, 0.8)' }}
+            >
               I aspire to construct impactful projects and features within the product, embracing
               challenges as opportunities for growth. Equally significant to me is fostering a
               positive and enriching work culture.

@@ -17,7 +17,8 @@ function AboutMe() {
               maxWidth: '640px'
               // textAlign: 'justify',
               // textJustify: 'inter-word'
-            }}>
+            }}
+          >
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
               <CardContent sx={{ flex: '1 0 auto' }}>
                 <div className="experience--position-title">ABOUT ME</div>
