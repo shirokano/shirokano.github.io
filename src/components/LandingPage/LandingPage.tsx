@@ -20,7 +20,12 @@ const LandingPage = () => {
           <Typewriter textList={heroText} />
         </div>
         <div className="typing-block--subtext">
-          <Typography variant="subtitle1" color="text.secondary" component="div" paragraph>
+          <Typography
+            variant="subtitle1"
+            color="text.secondary"
+            component="div"
+            paragraph
+            sx={{ fontSize: '1.25rem' }}>
             I aspire to construct impactful projects and features within the product, embracing
             challenges as opportunities for growth. Equally significant to me is fostering a
             positive and enriching work culture.
@@ -31,8 +36,14 @@ const LandingPage = () => {
         <div className={`fade-in ${isVisible ? 'active' : ''}`}>
           <Card
             raised={false}
-            sx={{ display: 'flex', background: '#fefefb', position: 'fixed', maxWidth: '640px' }}
-          >
+            sx={{
+              display: 'flex',
+              background: '#fefefb',
+              position: 'fixed',
+              maxWidth: '640px'
+              // textAlign: 'justify',
+              // textJustify: 'inter-word'
+            }}>
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>
               <CardContent sx={{ flex: '1 0 auto' }}>
                 <div className="experience--position-title">ABOUT ME</div>
