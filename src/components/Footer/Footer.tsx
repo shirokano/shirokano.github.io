@@ -23,17 +23,17 @@ function Footer() {
       <Box
         sx={{
           flexGrow: 1,
-          justifyContent: 'center',
+          justifyContent: 'right',
           display: 'flex',
           my: 1
         }}
       >
-        <Typography variant="caption" color="initial">
+        {/* <Typography variant="caption" color="initial">
           Coded by{' '}
           <a href="https://github.com/gohls" target="_blank" rel="noreferrer">
             @gohls
           </a>
-        </Typography>
+        </Typography> */}
       </Box>
     </Container>
   );

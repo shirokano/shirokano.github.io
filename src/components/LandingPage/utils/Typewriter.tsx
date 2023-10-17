@@ -25,7 +25,7 @@ const Typewriter = ({ textList }: TextPrinterProps) => {
           setCurrentTextIndex(currentTextIndex + 1);
         }
       }
-    }, 75); //Typing speed (in milliseconds)
+    }, 60); //Typing speed (lower number --> faster)
 
     return () => clearTimeout(timer);
   }, [currentTextIndex, currentCharIndex, textList]);
