@@ -6,12 +6,12 @@ import ComputerMonitor from './utils/ComputerMonitor';
 // import MatrixEffect from './utils/MatrixEffect';
 
 const LandingPage = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  // const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    // Trigger the fade-in effect when the component mounts
-    setIsVisible(true);
-  }, []);
+  // useEffect(() => {
+  //   // Trigger the fade-in effect when the component mounts
+  //   setIsVisible(true);
+  // }, []);
 
   const heroText = ['Developer.', 'Student of life.', 'Humble.'];
 
@@ -29,8 +29,7 @@ const LandingPage = () => {
               color="text.secondary"
               component="div"
               paragraph
-              sx={{ fontSize: '1.25rem', color: 'rgba(0, 0, 0, 0.8)' }}
-            >
+              sx={{ fontSize: '1.25rem', color: 'rgba(0, 0, 0, 0.8)' }}>
               I aspire to construct impactful projects and features within the product, embracing
               challenges as opportunities for growth. Equally significant to me is fostering a
               positive and enriching work culture.
