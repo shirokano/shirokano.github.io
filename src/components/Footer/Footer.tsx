@@ -5,8 +5,7 @@ function Footer() {
   return (
     <Container
       maxWidth="lg"
-      sx={{ zIndex: 2000, position: 'absolute', left: 0, bottom: 0, right: 0 }}
-    >
+      sx={{ zIndex: 2000, position: 'absolute', left: 0, bottom: 0, right: 0 }}>
       <Box
         sx={{
           flexGrow: 1,
@@ -14,8 +13,7 @@ function Footer() {
           display: 'flex',
           // mb: 2,
           paddingTop: 1
-        }}
-      >
+        }}>
         <Typography variant="caption" color="initial">
           ©2023 Simon Gohl. All Rights Reserved.
         </Typography>
@@ -23,17 +21,16 @@ function Footer() {
       <Box
         sx={{
           flexGrow: 1,
-          justifyContent: 'center',
+          justifyContent: 'right',
           display: 'flex',
           my: 1
-        }}
-      >
-        <Typography variant="caption" color="initial">
+        }}>
+        {/* <Typography variant="caption" color="initial">
           Coded by{' '}
           <a href="https://github.com/gohls" target="_blank" rel="noreferrer">
             @gohls
           </a>
-        </Typography>
+        </Typography> */}
       </Box>
     </Container>
   );

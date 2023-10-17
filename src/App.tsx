@@ -8,6 +8,7 @@ import Experience from './components/Experience/Experience';
 import LandingPage from './components/LandingPage/LandingPage';
 import Achievments from './components/Achievements/Achievements';
 import Footer from './components/Footer/Footer';
+import AboutMe from './components/AboutMe/AboutMe';
 
 const theme = createTheme({
   palette: {
@@ -43,9 +44,11 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline>
           <MenuBar />
-          <div className="spacer" />
           <Page>
             <LandingPage />
+          </Page>
+          <Page>
+            <AboutMe />
           </Page>
           <Page>
             <div className="experience">
@@ -57,6 +60,17 @@ function App() {
               <Achievments />
             </div>
           </Page>
+          {/* <Page>
+            <pre>
+              <code>{`
+███████ ██ ███    ███  ██████  ███    ██     ██████   ██████  ██   ██ ██      
+██      ██ ████  ████ ██    ██ ████   ██    ██       ██    ██ ██   ██ ██      
+███████ ██ ██ ████ ██ ██    ██ ██ ██  ██    ██   ███ ██    ██ ███████ ██      
+     ██ ██ ██  ██  ██ ██    ██ ██  ██ ██    ██    ██ ██    ██ ██   ██ ██      
+███████ ██ ██      ██  ██████  ██   ████ ██  ██████   ██████  ██   ██ ███████ 
+`}</code>
+            </pre>
+          </Page> */}
           <Footer />
         </CssBaseline>
       </ThemeProvider>

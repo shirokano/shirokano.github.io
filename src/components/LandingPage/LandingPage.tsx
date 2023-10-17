@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './LandingPage.scss'; // Import the SCSS file
 import { Box, Card, CardContent, CardMedia, Grid, Stack, Typography } from '@mui/material';
 import Typewriter from './utils/Typewriter';
+import ComputerMonitor from './utils/ComputerMonitor';
+import MatrixEffect from './utils/MatrixEffect';
 
 const LandingPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -63,11 +65,15 @@ const LandingPage = () => {
                 image="/images/github-profile-pic.jpeg"
                 alt="Image of me"
               />
-            </Stack>
-          </Card>
-        </div>
+              <div className="computer-screen">
+                <ComputerMonitor />
+              </div>
+            </div>
+          </div>
+        </Grid>
+        {/* <MatrixEffect /> */}
       </Grid>
-    </Grid>
+    </>
   );
 };
 
