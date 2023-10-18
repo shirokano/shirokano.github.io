@@ -1,7 +1,7 @@
 import React from 'react';
 import './Projects.scss';
 import Card from '../utils/Card';
-import { achievements } from '../../texts/achievements';
+import { achievements } from '../../texts/projects';
 
 function Projects() {
   return (
