@@ -1,5 +1,4 @@
 import {
-  FaMedium,
   FaBlog,
   FaGithub,
   FaLinkedin,
