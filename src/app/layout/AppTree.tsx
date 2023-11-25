@@ -1,8 +1,7 @@
 import * as React from "react";
-import TreeView from "@mui/lab/TreeView";
+import { TreeView, TreeItem } from "@mui/x-tree-view";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import TreeItem from "@mui/lab/TreeItem";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useTheme } from "@mui/material/styles";

@@ -3,10 +3,15 @@ Following content is adapted from https://markdown-it.github.io/
 :::
 
 # h1 Heading
+
 ## h2 Heading
+
 ### h3 Heading
+
 #### h4 Heading
+
 ##### h5 Heading
+
 ###### h6 Heading
 
 ## Horizontal Rules
@@ -17,9 +22,9 @@ Following content is adapted from https://markdown-it.github.io/
 
 **This is bold text**
 
-__This is bold text__
+**This is bold text**
 
-*This is italic text*
+_This is italic text_
 
 _This is italic text_
 
@@ -27,22 +32,23 @@ _This is italic text_
 
 ## Blockquotes
 
-
 > Blockquotes can also be nested...
->> ...by using additional greater-than signs right next to each other...
+>
+> > ...by using additional greater-than signs right next to each other...
+> >
 > > > ...or with spaces between arrows.
 
 ## Lists
 
 Unordered
 
-+ Create a list by starting a line with `+`, `-`, or `*`
-+ Sub-lists are made by indenting 2 spaces:
+- Create a list by starting a line with `+`, `-`, or `*`
+- Sub-lists are made by indenting 2 spaces:
   - Marker character change forces new list start:
-    * Ac tristique libero volutpat at
-    + Facilisis in pretium nisl aliquet
+    - Ac tristique libero volutpat at
+    * Facilisis in pretium nisl aliquet
     - Nulla volutpat aliquam velit
-+ Very easy!
+- Very easy!
 
 Ordered
 
@@ -72,7 +78,7 @@ Sample text here
 
 Syntax highlighting
 
-``` js
+```js
 var foo = function (bar) {
   return bar++;
 };
@@ -87,30 +93,30 @@ def hello_world():
 
 ## Tables
 
-| Option | Description |
-| ------ | ----------- |
+| Option | Description                                                               |
+| ------ | ------------------------------------------------------------------------- |
 | data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
+| engine | engine to be used for processing templates. Handlebars is the default.    |
+| ext    | extension to be used for dest files.                                      |
 
 Right aligned columns
 
-| Option | Description |
-| ------:| -----------:|
-| data   | path to data files to supply the data that will be passed into templates. |
-| engine | engine to be used for processing templates. Handlebars is the default. |
-| ext    | extension to be used for dest files. |
-
+| Option |                                                               Description |
+| -----: | ------------------------------------------------------------------------: |
+|   data | path to data files to supply the data that will be passed into templates. |
+| engine |    engine to be used for processing templates. Handlebars is the default. |
+|    ext |                                      extension to be used for dest files. |
 
 ## Links
 
-[link text](https://noworneverev.github.io/)
+[link text](https://simon.gohl.dev/)
 
-[link with title](https://github.com/noworneverev/react-vscode-portfolio "title text!")
+[link with title](https://github.com/gohls/personal-portfolio-website "title text!")
 
-Autoconverted link https://noworneverev.github.io/ 
+Autoconverted link https://simon.gohl.dev
 
 ## Alerts
+
 ::: warning
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 :::
@@ -126,4 +132,3 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 ::: error
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 :::
-
