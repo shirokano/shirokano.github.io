@@ -1,27 +1,19 @@
-# Intro
+## Website
 
-👋 Hello World! I'm Simon, a software engineer and this is my personal portfolio website 🌐. It's a showcase my work experience, achievements, and an all-around summary of my skills. 🚀
+My personal portfolio website. Visit --> [simon.gohl.dev](simon.gohl.dev)
 
-Moreover, it also serves as a learning lab 📚 where I continuously explore new technologies and share my insights through blogging. 📝
+## About The Project
 
-## CI/CD
+The project is inspired by [Visual Studio Code](https://github.com/microsoft/vscode), [https://noworneverev.github.io/](https://github.com/noworneverev/react-vscode-portfolio), and [caglarturali.github.io](https://github.com/caglarturali/caglarturali.github.io).
 
-I've set up a GitHub workflow to work its magic by running tests and keeping our code "pretty". This dynamic duo not only safeguards against sneaky bugs making their way into production 🐛 ⛔ but also gives our code that stylish, well-groomed look. You can unleash this superpower before you commit or push changes with these simple commands:
+### Built With
 
-- `npm run format` 🎨
-- `npm run test` 🧪
+- [React.js](https://reactjs.org/)
+- [Material UI](https://github.com/mui/material-ui)
+- [react-markdown](https://github.com/remarkjs/react-markdown)
 
-## Tech Stack
+## Acknowledgments
 
-- `React`
-- `Typescript`
-- `Bash`
-
-## To-Do
-
-- [ ] Impl Linkedin API calls to get information
-- [ ] Impl Github API calls to get information
-- [ ] Clean-up + Optimize
-- [ ] Make mobile friendly
-- [ ] Update theme (add more colors)
-- [ ] Add "Blog" + "Lab" pages
+- [GitHub Pages](https://pages.github.com)
+- [React Icons](https://react-icons.github.io/react-icons/search)
+- [caglarturali.github.io](https://github.com/noworneverev/react-vscode-portfolio)
