@@ -4,7 +4,7 @@
 
 - Web Development (Frontend & Backend)
 - Agile Methodologies (Scrum, Waterfall)
-- Micro-services & Miro-frontends
+- Micro-services & Micro-frontends
 - SaaS
 
 ## Programming languages
