@@ -2,7 +2,7 @@
 
 ## Summary
 
-Software Engineer specializing in web application development, but dabbled with vaious other technologies such as IoT, bots, and mobile apps. Experienced with all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages and frameworks including JavaScript/TypeScript, Node.js, Python, React, Django, and Next.js. Gained strong experience supporting the design, development, and implementation of intuitive software applications and services.
+Software Engineer specializing in web application development, but dabbled with various other technologies such as IoT, bots, and mobile apps. Experienced with all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages and frameworks including JavaScript/TypeScript, Node.js, Python, React, Django, and Next.js. Gained strong experience supporting the design, development, and implementation of intuitive software applications and services.
 
 ## Experience
 
@@ -74,7 +74,7 @@ Created and presented a proof-of-concept (PoC) web application used to perform t
 
 **7th place (out of 100+)** @ [HackTX CTF](https://hacktx.com/19/) _(Nov 2019)_
 
-All the teams placed ahead were part of the ISSS club (who hosted the CTF), but still placed ahead of several other ISSS members and many other CTF enthuisests!
+All the teams placed ahead were part of the ISSS club (who hosted the CTF), but still placed ahead of several other ISSS members and many other CTF enthusiasts!
 
 ## Languages
 
