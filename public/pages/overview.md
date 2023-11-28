@@ -6,7 +6,7 @@ Software Engineer specializing in web application development, but dabbled with 
 
 ## Experience
 
-**Software Engineer** @ [Built Technologies](https://getbuilt.com/) _(Nov 2022 - Nov 2023)_
+**Software Engineer** @ [Built Technologies](https://getbuilt.com/) _(Nov 2022 - Jul 2023)_
 
 Worked at a fast-paced FinTech startup, engineering a new SaaS product feature involving real-time updates, 3rd party API integration, and data-driven insights, like risk alerts and project tracking, prompting >25% product upsell opportunity.
 
