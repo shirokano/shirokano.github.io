@@ -1,6 +1,6 @@
 # 👨‍💻 Experience
 
-**Software Engineer** @ [Built Technologies](https://getbuilt.com/) _(Nov 2022 - Jul 2023)_
+**Software Engineer** @ [Built Technologies](https://getbuilt.com/) _(2022 - 2023)_
 
 Worked at a fast-paced FinTech startup, engineering a new SaaS product feature involving real-time updates, 3rd party API integration, and data-driven insights, like risk alerts and project tracking, prompting >25% product upsell opportunity.
 
@@ -12,7 +12,7 @@ Worked at a fast-paced FinTech startup, engineering a new SaaS product feature i
 
 &nbsp;
 
-**Full Stack Software Engineer** @ [One Stop Inc.](https://onestopinc.com/) _(June 2020 - Oct 2022)_
+**Full Stack Software Engineer** @ [One Stop Inc.](https://onestopinc.com/) _(2020 - 2022)_
 
 Suggested and spearheaded major pipeline feature, progressing through the complete software development life cycle including requirement analysis, system design, development, unit testing, implementation, performance tuning, maintenance, and post-production support.
 
