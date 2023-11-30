@@ -7,7 +7,7 @@ Worked at a fast-paced FinTech startup, engineering a new SaaS product feature i
 - Detailed achievements:
   - Executed full-stack software engineering tasks, encompassing the development of 5+ frontend web pages, 25+ app features, and corresponding backend services, bootstrapping projects from ground up.
   - Contributed to pre-release software testing efforts achieving test coverage of >90% of all project repositories, created CI/CD processes, and participated in approx. 4 code peer-reviews weekly.
-  - Acted as a Scrum Master on rotational basis in charge of coordinating Agile / Scrum activities during software engineering projects.
+  - Acted as a Scrum Master on rotational basis in charge of facilitating Agile / Scrum ceremonies and activities during software engineering projects.
 - _**Technologies used:**_ React, TypeScript, JavaScript, single-spa, Node.js, Python, NestJS, Redux.js, Redis, AWS ecosystem (CloudWatch, S3, Lambda) Jest, Pytest, Docker, Microservices, SaaS, Jira, Postman API, Datadog, Scrum, HTML, SCSS, MySQL, Git, GitHub Actions, CI/CD, TDD, Confluence
 
 &nbsp;
