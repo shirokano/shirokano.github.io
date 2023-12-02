@@ -19,7 +19,7 @@
 
 ## [Vicinity Alarm Clock](https://github.com/gohls/vicinity-alarm-clock) 🔗
 
-- A home alarm clock that only sounds the alarm when you're at home. It repeatly checks for my phone's boothtooth signal, which is how it detects if I am home or not.
+- A home alarm clock that only sounds the alarm when you're at home. It repeatly checks for my phone's bluetooth signal, which is how it detects if I am home or not.
 - Raspberry Pi
 - LED Display Board
 - C++
