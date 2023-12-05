@@ -52,7 +52,7 @@ Created and presented a proof-of-concept (PoC) web application used to perform t
 - Web Development (Frontend & Backend)
 - Agile Methodologies (Scrum, Waterfall)
 - Micro-services & Micro-frontends
-- SaaS
+- SaaS & B2B
 
 | Programming languages | Frameworks | Databases  | Tools & Libs   | Cloud        |
 | --------------------- | ---------- | ---------- | -------------- | ------------ |
