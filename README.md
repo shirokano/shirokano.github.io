@@ -1,6 +1,8 @@
-## Website
+# My Personal Portfolio Website
 
-My personal portfolio website. Visit --> [simon.gohl.dev](simon.gohl.dev)
+<img width="1430" alt="my-website-screenshot" src="https://github.com/gohls/personal-portfolio-website/assets/66274765/0eee1858-4978-4510-8f0b-99d54a0bb755">
+
+[simon.gohl.dev](simon.gohl.dev)
 
 ## About The Project
 
