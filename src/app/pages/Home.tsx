@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@mui/material";
 import React, { useEffect } from "react";
-import logo from "../../static/favicon.png";
+import logo from "../../static/me-handbag.jpg";
 import { useLocation } from "react-router-dom";
 import { links } from "./links";
 
@@ -54,19 +54,14 @@ export default function Home({ setSelectedIndex }: Props) {
             </Grid>
             <Grid
               display="flex"
+              flexDirection="column"
               justifyContent={{ xs: "center", sm: "flex-start" }}
             >
               <Typography variant="subtitle1" gutterBottom>
-                In the binary ballet, we dance with <br /> data and choreograph
-                with code.
-                {/* Better an{' '}
-                <Box fontWeight="fontWeightMedium" display="inline">
-                  oops
-                </Box>{' '}
-                than a{' '}
-                <Box fontWeight="fontWeightMedium" display="inline">
-                  what if
-                </Box> */}
+                Why you join the navy if you can be a pirate -- Steve Jobs
+              </Typography>
+              <Typography variant="subtitle1" gutterBottom>
+                海賊になれるのに、なぜ海軍に入るのか -- スティーブ・ジョブズ
               </Typography>
             </Grid>
             <Grid
