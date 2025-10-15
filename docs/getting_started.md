@@ -2,7 +2,7 @@
 
 <img width="1430" alt="my-website-screenshot" src="https://github.com/gohls/personal-portfolio-website/assets/66274765/0eee1858-4978-4510-8f0b-99d54a0bb755">
 
-[simon.gohl.dev](simon.gohl.dev)
+[simon.gohl.dev](shirokano.github.io)
 
 ## About The Project
 
