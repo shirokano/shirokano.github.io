@@ -65,9 +65,11 @@ Created and presented a proof-of-concept (PoC) web application used to perform t
 
 - _**Technologies used:**_ Git, HTML, CSS, Wordpress, Javscript, jQuery
 
+&nbsp;
+
 ## Education
 
-`2017 - 2020` [Osaka Metropolitan University](https://www.omu.ac.jp/) **B.Sc.** in Computer Science.
+`2011 - 2015` [Osaka Metropolitan University](https://www.omu.ac.jp/) **B.Sc.** in Computer Science.
 
 - Full Academic Scholarship
 - Earned a GPA of 3.7/4.0
@@ -90,5 +92,5 @@ Created and presented a proof-of-concept (PoC) web application used to perform t
 
 ## Languages
 
-**English**: Native
+**English**: Fluent
 **Japanese**: Native

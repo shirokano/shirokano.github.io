@@ -1,34 +1,50 @@
 # 👨‍💻 Experience
 
-**Software Engineer** @ [Built Technologies](https://getbuilt.com/) _(2022 - 2023)_
-
-Worked at a fast-paced FinTech startup, engineering a new SaaS product feature involving real-time updates, 3rd party API integration, and data-driven insights, like risk alerts and project tracking, prompting >25% product upsell opportunity.
+**Full Stack Engineer** @ [PepsiCo](https://pepsico.com/) _(Apr 2023 - Oct 2025)_
 
 - Detailed achievements:
-  - Executed full-stack software engineering tasks, encompassing the development of 5+ frontend web pages, 25+ app features, and corresponding backend services, bootstrapping projects from ground up.
-  - Contributed to pre-release software testing efforts achieving test coverage of >90% of all project repositories, created CI/CD processes, and participated in approx. 4 code peer-reviews weekly.
-  - Acted as a Scrum Master on rotational basis in charge of facilitating Agile / Scrum ceremonies and activities during software engineering projects.
-- _**Technologies used:**_ React, TypeScript, JavaScript, single-spa, Node.js, Python, NestJS, Redux.js, Redis, AWS ecosystem (CloudWatch, S3, Lambda) Jest, Pytest, Docker, Microservices, SaaS, Jira, Postman API, Datadog, Scrum, HTML, SCSS, MySQL, Git, GitHub Actions, CI/CD, TDD, Confluence
+  - Designed and developed a secure and reliable authentication module for a multi-tenancy SaaS platform, improving user account security using Keycloak
+  - Implemented a serverless architecture in collaboration with Inngest.com, improving transaction accuracy and reducing processing time.
+  - Upgraded the UI flows with stripe payment components using React.
+- _**Technologies used:**_ React, TypeScript, JavaScript, Node.js, Python, NestJS, Redux.js, Redis, Azure ecosystem, Jest, Pytest, Docker, Microservices, SaaS, Jira, Postman API, Datadog, Scrum, HTML, SCSS, MySQL, Git, GitHub Actions, CI/CD, TDD, Confluence
 
 &nbsp;
 
-**Full Stack Software Engineer** @ [One Stop Inc.](https://onestopinc.com/) _(2020 - 2022)_
-
-Suggested and spearheaded major pipeline feature, progressing through the complete software development life cycle including requirement analysis, system design, development, unit testing, implementation, performance tuning, maintenance, and post-production support.
+**Freelance Software Engineer** @ [Upwork Inc.](https://upwork.com/) _(Aug 2020 - Mar 2023)_
 
 - Detailed achievements:
-  - Spearheaded a high-visibility, large-scale software development pipeline project to streamline workflows between diverse business departments, an effort that generated major interest with executive stakeholders.
-  - Functioned as core developer for the internal warehouse system and ad-hoc developer for the public-facing website, developing a combined 30+ front-end UI features, 15+ backend APIs, and 10+ data models.
-  - Collaborated across teams to ideate on project development, specifications, and design aggregation concepts within a dynamic, cross-functional team, driving successful project outcomes.
+  - Worked on multiple freelancing platforms, including Upwork.
+  - As a full-stack developer, collaborated with dozens of clients and successfully delivered 10+ MVPs for YC-backed startup companies.
+  - Suggested and spearheaded major pipeline feature, progressing through the complete software development life cycle including requirement analysis, system design, development, unit testing, implementation, performance tuning, maintenance, and post-production support.
 - _**Technologies used:**_ React, TypeScript, JavaScript, Node.js, Python, Django, Django REST Framework, Redis, MobX, Pytest, Sentry, Software Development Life Cycle (SDLC), HTML, CSS, PostgreSQL, Git
 
 &nbsp;
 
-**Software Engineer Intern** @ [Electronic Arts - EA](https://www.ea.com/) _(May 2019 - Aug 2019)_
+**Python / React Full Stack Engineer** @ [Blockchain Termnal (BCT)](https://bct.io/) _(Mar 2018 - Jul 2020)_
+
+- Detailed achievements:
+  - Improved a blockchain arbitrage bot with low-buy, high-sell logic using Python/Django
+  - Built a peer-to-peer crypto payment system on XRP and TRX ledgers, processing over $1M in transactions in the first quarter.
+  - Integrated TradingView for real-time cryptocurrency tracking using TradingViewChart Library.
+  - Created a real-time global order book by aggregating data from multiple crypto exchange platforms using CCXT/CCXWS.
+  - Led a team of five frontend engineers to deliver investment dashboards using React, D3.js
+- _**Technologies used:**_ React, TypeScript, JavaScript, Node.js, Python, Django, Django REST Framework, CoinPayment, TradingViewChart, CCXT/CCXWS, Stripe
+
+&nbsp;
+
+**Frontend Developer** @ [Spectiv®)](https://spectivvr.tv/) _(Aug 2016 - Jan 2018)_
+
+- Detailed achievements:
+  - Built the frontend using React, enhancing user experience and improving user engagement.
+  - Designed and implemented the backend with Node.js, Express, and PostgreSQL for robust and scalable server-side functionality.
+  - Utilized streamlined storage solutions using AWS S3, reducing storage costs by 25% while improving data accessibility and management efficiency.
+  - Led the development and deployment of the Delight Video Player (d18), increasing user engagement.
+- _**Technologies used:**_ React, TypeScript, JavaScript, Node.js, Live Video Streaming, D18, Express, Postgresql
+
+&nbsp;
+
+**Software Engineer Intern** @ [AliceSoft](http://www.alicesoft.com/) _(Jul 2015 - Apr 2016)_
 
 Created and presented a proof-of-concept (PoC) web application used to perform text data analytics, which gained approval as a long-term software development initiative.
 
-- Detailed achievements:
-  - Created a React-based front end with a user-friendly interface and implemented a Flask back end for rapid, text analysis, generating comprehensive analytical reports shared company-wide.
-  - Gained recognition as one of 14 project submissions out of 1,400 that were selected for the company’s science fair for exhibiting innovative software development vision.
-- _**Technologies used:**_ React, Flask, JavaScript, Node.js, HTML, CSS, Git
+- _**Technologies used:**_ Git, HTML, CSS, Wordpress, Javscript, jQuery

@@ -19,10 +19,9 @@
 ## Frameworks
 
 - React
-  - Redux.js
-  - React Router
-  - MobX
-  - Jest
+- Next.js
+- Svelte.js
+- Vue.js
 - Django
   - Django REST Framework
 - NestJS
@@ -36,9 +35,18 @@
 - MySQL
 - SQLite
 - Redis
+- Supabase
 
 ## Tools & Libraries
 
+- AI & ML Tools
+  - Hugging Face
+  - LangChain
+  - OpenAI API
+  - CUDA
+  - Jupyter Notebooks
+  - Pandas
+  - NumPy
 - JIRA
 - Github Actions
 - Docker
@@ -48,6 +56,19 @@
 - Unix shell
 - GraphQL (Apollo)
 
+## AI & Machine Learning
+
+- Large Language Models (LLMs)
+- Natural Language Processing (NLP)
+- Machine Learning Frameworks
+  - TensorFlow
+  - PyTorch
+  - scikit-learn
+- Prompt Engineering
+- Vector Databases
+- Neural Networks
+- Computer Vision
+
 ## Debugging
 
 - Datadog
@@ -56,9 +77,9 @@
 
 ## Cloud
 
+- Azure
 - AWS (Cloudwatch, S3, Lambda)
 - GCP
-- Heroku
 - DigitalOcean
 
 ## Documentation
