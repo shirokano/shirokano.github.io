@@ -1,6 +1,6 @@
 # My Personal Portfolio Website
 
-<img width="1430" alt="my-website-screenshot" src="https://github.com/gohls/personal-portfolio-website/assets/66274765/0eee1858-4978-4510-8f0b-99d54a0bb755">
+<img width="1430" alt="my-website-screenshot" src="https://github.com/user-attachments/assets/1f25057f-e304-4998-869f-9196be3830bf">
 
 [shirokano.github.io](shirokano.github.io)
 
