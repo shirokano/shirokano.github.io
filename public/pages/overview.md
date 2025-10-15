@@ -2,48 +2,75 @@
 
 ## Summary
 
-Software Engineer specializing in web application development, but dabbled with various other technologies such as IoT, bots, and mobile apps. Experienced with all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages and frameworks including JavaScript/TypeScript, Node.js, Python, React, Django, and Next.js. Gained strong experience supporting the design, development, and implementation of intuitive software applications and services.
+“Why join the navy if you can be a pirate?” — Steve Jobs
+
+こんにちは！日本でも活動しているフルスタックエンジニアです。
+
+That quote has guided my entire journey as a developer. I’ve always believed that real innovation comes from those willing to explore uncharted waters, take risks, and build things that don’t yet exist.
+
+Over the years, I’ve honed my craft in Python, JavaScript, React, and Node.js, building everything from lightweight MVPs for startups to scalable applications for growing businesses. I thrive at the intersection of creativity and engineering — transforming ideas into clean, functional, and impactful digital experiences.
+
+My goal isn’t just to write code; it’s to build meaningful products that solve real problems and make technology feel more human. I’m constantly learning, experimenting, and pushing boundaries — because staying curious is the best way to keep growing.
+
+もし同じ「パイレーツ精神」を持っているなら、ぜひつながりましょう。
 
 ## Experience
 
-**Software Engineer** @ [Built Technologies](https://getbuilt.com/) _(2022 - 2023)_
-
-Worked at a fast-paced FinTech startup, engineering a new SaaS product feature involving real-time updates, 3rd party API integration, and data-driven insights, like risk alerts and project tracking, prompting >25% product upsell opportunity.
+**Full Stack Engineer** @ [PepsiCo](https://pepsico.com/) _(Apr 2023 - Oct 2025)_
 
 - Detailed achievements:
-  - Executed full-stack software engineering tasks, encompassing the development of 5+ frontend web pages, 25+ app features, and corresponding backend services, bootstrapping projects from ground up.
-  - Contributed to pre-release software testing efforts achieving test coverage of >90% of all project repositories, created CI/CD processes, and participated in approx. 4 code peer-reviews weekly.
-  - Acted as a Scrum Master on rotational basis in charge of facilitating Agile / Scrum ceremonies and activities during software engineering projects.
-- _**Technologies used:**_ React, TypeScript, JavaScript, single-spa, Node.js, Python, NestJS, Redux.js, Redis, AWS ecosystem (CloudWatch, S3, Lambda) Jest, Pytest, Docker, Microservices, SaaS, Jira, Postman API, Datadog, Scrum, HTML, SCSS, MySQL, Git, GitHub Actions, CI/CD, TDD, Confluence
+  - Designed and developed a secure and reliable authentication module for a multi-tenancy SaaS platform, improving user account security using Keycloak
+  - Implemented a serverless architecture in collaboration with Inngest.com, improving transaction accuracy and reducing processing time.
+  - Upgraded the UI flows with stripe payment components using React.
+- _**Technologies used:**_ React, TypeScript, JavaScript, Node.js, Python, NestJS, Redux.js, Redis, Azure ecosystem, Jest, Pytest, Docker, Microservices, SaaS, Jira, Postman API, Datadog, Scrum, HTML, SCSS, MySQL, Git, GitHub Actions, CI/CD, TDD, Confluence
 
 &nbsp;
 
-**Full Stack Software Engineer** @ [One Stop Inc.](https://onestopinc.com/) _(2020 - 2022)_
-
-Suggested and spearheaded major pipeline feature, progressing through the complete software development life cycle including requirement analysis, system design, development, unit testing, implementation, performance tuning, maintenance, and post-production support.
+**Freelance Software Engineer** @ [Upwork Inc.](https://upwork.com/) _(Aug 2020 - Mar 2023)_
 
 - Detailed achievements:
-  - Spearheaded a high-visibility, large-scale software development pipeline project to streamline workflows between diverse business departments, an effort that generated major interest with executive stakeholders.
-  - Functioned as core developer for the internal warehouse system and ad-hoc developer for the public-facing website, developing a combined 30+ front-end UI features, 15+ backend APIs, and 10+ data models.
-  - Collaborated across teams to ideate on project development, specifications, and design aggregation concepts within a dynamic, cross-functional team, driving successful project outcomes.
+  - Worked on multiple freelancing platforms, including Upwork.
+  - As a full-stack developer, collaborated with dozens of clients and successfully delivered 10+ MVPs for YC-backed startup companies.
+  - Suggested and spearheaded major pipeline feature, progressing through the complete software development life cycle including requirement analysis, system design, development, unit testing, implementation, performance tuning, maintenance, and post-production support.
 - _**Technologies used:**_ React, TypeScript, JavaScript, Node.js, Python, Django, Django REST Framework, Redis, MobX, Pytest, Sentry, Software Development Life Cycle (SDLC), HTML, CSS, PostgreSQL, Git
 
 &nbsp;
 
-**Software Engineer Intern** @ [Electronic Arts - EA](https://www.ea.com/) _(May 2019 - Aug 2019)_
+**Python / React Full Stack Engineer** @ [Blockchain Termnal (BCT)](https://bct.io/) _(Mar 2018 - Jul 2020)_
+
+- Detailed achievements:
+  - Improved a blockchain arbitrage bot with low-buy, high-sell logic using Python/Django
+  - Built a peer-to-peer crypto payment system on XRP and TRX ledgers, processing over $1M in transactions in the first quarter.
+  - Integrated TradingView for real-time cryptocurrency tracking using TradingViewChart Library.
+  - Created a real-time global order book by aggregating data from multiple crypto exchange platforms using CCXT/CCXWS.
+  - Led a team of five frontend engineers to deliver investment dashboards using React, D3.js
+- _**Technologies used:**_ React, TypeScript, JavaScript, Node.js, Python, Django, Django REST Framework, CoinPayment, TradingViewChart, CCXT/CCXWS, Stripe
+
+&nbsp;
+
+**Frontend Developer** @ [Spectiv®)](https://spectivvr.tv/) _(Aug 2016 - Jan 2018)_
+
+- Detailed achievements:
+  - Built the frontend using React, enhancing user experience and improving user engagement.
+  - Designed and implemented the backend with Node.js, Express, and PostgreSQL for robust and scalable server-side functionality.
+  - Utilized streamlined storage solutions using AWS S3, reducing storage costs by 25% while improving data accessibility and management efficiency.
+  - Led the development and deployment of the Delight Video Player (d18), increasing user engagement.
+- _**Technologies used:**_ React, TypeScript, JavaScript, Node.js, Live Video Streaming, D18, Express, Postgresql
+
+&nbsp;
+
+**Software Engineer Intern** @ [AliceSoft](http://www.alicesoft.com/) _(Jul 2015 - Apr 2016)_
 
 Created and presented a proof-of-concept (PoC) web application used to perform text data analytics, which gained approval as a long-term software development initiative.
 
-- Detailed achievements:
-  - Created a React-based front end with a user-friendly interface and implemented a Flask back end for rapid, text analysis, generating comprehensive analytical reports shared company-wide.
-  - Gained recognition as one of 14 project submissions out of 1,400 that were selected for the company’s science fair for exhibiting innovative software development vision.
-- _**Technologies used:**_ React, Flask, JavaScript, Node.js, HTML, CSS, Git
+- _**Technologies used:**_ Git, HTML, CSS, Wordpress, Javscript, jQuery
 
 ## Education
 
-`2017 - 2020` [St. Edward's University](https://www.stedwards.edu/) **B.Sc.** in Computer Science.
+`2017 - 2020` [Osaka Metropolitan University](https://www.omu.ac.jp/) **B.Sc.** in Computer Science.
 
-- Computer Science Club President _(Sept 2019 - June 2020)_
+- Full Academic Scholarship
+- Earned a GPA of 3.7/4.0
 
 ## Skills
 
@@ -61,22 +88,7 @@ Created and presented a proof-of-concept (PoC) web application used to perform t
 | Node.js               | Next.js    | SQLite     | Docker         | Heroku       |
 | Python                | FastAPI    | Redis      | Postman        | DigitalOcean |
 
-## Certificates
-
-- [Graph Developer – Professional](https://www.apollographql.com/tutorials/certifications/eecca9ff-d061-4c35-a5ec-72f18295f6a9) (2023)
-  **Apollo GraphQL**
-- [Redis | RU101: Intro to Data Structures](https://university.redis.com/certificates/b97b484104384f398c5f46f35ab318a6) (2023)
-  **Redis University**
-- [eJPT - Junior Penetration Tester](https://verified.elearnsecurity.com/certificates/c9372b00-794b-4afd-af14-6e8b7f72af48) (2018)
-  **INE Security (FKA eLearnSecurity)**
-
-## Accomplishments
-
-**7th place (out of 100+)** @ [HackTX CTF](https://hacktx.com/19/) _(Nov 2019)_
-
-All the teams placed ahead were part of the ISSS club (who hosted the CTF), but still placed ahead of several other ISSS members and many other CTF enthusiasts!
-
 ## Languages
 
 **English**: Native
-**German**: Native
+**Japanese**: Native
