@@ -2,8 +2,7 @@ import {
   FaBlog,
   FaGithub,
   FaLinkedin,
-  FaEnvelope,
-  FaHackerrank,
+  FaEnvelope
 } from "react-icons/fa";
 
 export const links = [
